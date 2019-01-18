@@ -1,0 +1,6 @@
+framework module Pods_CARPOOLING {
+  umbrella header "Pods-CARPOOLING-umbrella.h"
+
+  export *
+  module * { export * }
+}
