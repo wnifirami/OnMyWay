@@ -10,6 +10,8 @@ pod 'AlamofireImage'
  pod 'MRCountryPicker', '~> 0.0.8'
 pod 'SwiftyAvatar', '~> 1.1'
 pod 'Cosmos'
+pod "Floaty", "~> 4.1.0"
+
 
 
 end
