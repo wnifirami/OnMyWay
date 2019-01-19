@@ -11,6 +11,9 @@ pod 'AlamofireImage'
 pod 'SwiftyAvatar', '~> 1.1'
 pod 'Cosmos'
 pod "Floaty", "~> 4.1.0"
+pod ‘StepIndicator’, '~> 1.0.6’
+pod 'IQKeyboardManagerSwift'
+
 
 
 

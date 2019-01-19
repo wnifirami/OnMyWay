@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06795A5721F386AA0070D506 /* SignupfirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06795A5621F386AA0070D506 /* SignupfirstViewController.swift */; };
+		06795A5921F3D7230070D506 /* SignupsecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06795A5821F3D71F0070D506 /* SignupsecondViewController.swift */; };
 		06A259B121F2116000929A1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A259B021F2116000929A1F /* AppDelegate.swift */; };
 		06A259B321F2116000929A1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A259B221F2116000929A1F /* ViewController.swift */; };
 		06A259B621F2116000929A1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06A259B421F2116000929A1F /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06795A5621F386AA0070D506 /* SignupfirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupfirstViewController.swift; sourceTree = "<group>"; };
+		06795A5821F3D71F0070D506 /* SignupsecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupsecondViewController.swift; sourceTree = "<group>"; };
 		06A259AD21F2116000929A1F /* CARPOOLING.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CARPOOLING.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06A259B021F2116000929A1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06A259B221F2116000929A1F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +50,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06795A5421F3866B0070D506 /* Login and sign */ = {
+			isa = PBXGroup;
+			children = (
+				06795A5621F386AA0070D506 /* SignupfirstViewController.swift */,
+				06795A5821F3D71F0070D506 /* SignupsecondViewController.swift */,
+			);
+			path = "Login and sign";
+			sourceTree = "<group>";
+		};
+		06795A5521F386810070D506 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		06A259A421F2116000929A1F = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +87,8 @@
 		06A259AF21F2116000929A1F /* CARPOOLING */ = {
 			isa = PBXGroup;
 			children = (
+				06795A5521F386810070D506 /* Cells */,
+				06795A5421F3866B0070D506 /* Login and sign */,
 				06A259C521F213ED00929A1F /* Classes */,
 				06A259B021F2116000929A1F /* AppDelegate.swift */,
 				06A259B221F2116000929A1F /* ViewController.swift */,
@@ -209,7 +231,9 @@
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
 				"${BUILT_PRODUCTS_DIR}/Floaty/Floaty.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/MRCountryPicker/MRCountryPicker.framework",
+				"${BUILT_PRODUCTS_DIR}/StepIndicator/StepIndicator.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyAvatar/SwiftyAvatar.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -220,7 +244,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Floaty.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MRCountryPicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StepIndicator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyAvatar.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -236,10 +262,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				06A259B921F2116000929A1F /* CARPOOLING.xcdatamodeld in Sources */,
+				06795A5721F386AA0070D506 /* SignupfirstViewController.swift in Sources */,
 				06A259B321F2116000929A1F /* ViewController.swift in Sources */,
 				06A259C721F2143000929A1F /* GradientView.swift in Sources */,
 				06A259B121F2116000929A1F /* AppDelegate.swift in Sources */,
 				06A259C921F2264E00929A1F /* CardView.swift in Sources */,
+				06795A5921F3D7230070D506 /* SignupsecondViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
