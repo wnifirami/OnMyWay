@@ -108,16 +108,17 @@
                         <outlet property="loginbtn" destination="ovZ-p4-dPc" id="IsZ-XW-Qlg"/>
                         <outlet property="logo" destination="Srt-g7-zjG" id="FyC-cC-1HU"/>
                         <outlet property="password" destination="MVt-8p-GJk" id="Fp3-59-I55"/>
+                        <segue destination="t76-oq-EAL" kind="show" identifier="join" id="HOj-8g-FMe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="53.600000000000001" y="27.436281859070466"/>
         </scene>
-        <!--View Controller-->
+        <!--Signupfirst View Controller-->
         <scene sceneID="p5t-Qz-VXQ">
             <objects>
-                <viewController id="t76-oq-EAL" sceneMemberID="viewController">
+                <viewController id="t76-oq-EAL" customClass="SignupfirstViewController" customModule="CARPOOLING" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ais-gk-kwv" customClass="GradientView" customModule="CARPOOLING" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -171,6 +172,9 @@
                                 <state key="normal" title="Next" backgroundImage="Rectangle arrondi 1">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="Nextbtnclicked:" destination="t76-oq-EAL" eventType="touchUpInside" id="6n6-K3-TFX"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="fTC-YQ-3xm">
                                 <rect key="frame" x="23" y="278" width="35" height="30"/>
@@ -227,6 +231,13 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <connections>
+                        <outlet property="confirmpassword" destination="ow3-33-94Q" id="ene-0P-yyy"/>
+                        <outlet property="email" destination="pi0-ip-Jer" id="57v-B6-az5"/>
+                        <outlet property="password" destination="NJZ-Wc-wCt" id="2LP-48-f5z"/>
+                        <outlet property="usernale" destination="hJB-ZX-nNg" id="ndx-xd-CGf"/>
+                        <segue destination="kAX-4H-QQ9" kind="show" identifier="signupnext" id="a03-iL-Jeg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AyZ-Ra-Rjg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1669,10 +1680,10 @@
             </objects>
             <point key="canvasLocation" x="4480.8000000000002" y="-208.24587706146929"/>
         </scene>
-        <!--View Controller-->
+        <!--Signupsecond View Controller-->
         <scene sceneID="Cb1-hG-a6C">
             <objects>
-                <viewController id="kAX-4H-QQ9" sceneMemberID="viewController">
+                <viewController id="kAX-4H-QQ9" customClass="SignupsecondViewController" customModule="CARPOOLING" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Eqi-D5-obK" customClass="GradientView" customModule="CARPOOLING" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1701,6 +1712,9 @@
                                 <state key="normal" backgroundImage="calendar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="calendarbtnclicked:" destination="kAX-4H-QQ9" eventType="touchUpInside" id="hrC-4W-s5n"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Birth date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="slo-sR-3X1">
                                 <rect key="frame" x="165" y="457" width="175" height="30"/>
@@ -1723,6 +1737,9 @@
                                 <state key="normal" title="Sign Up" backgroundImage="Rectangle arrondi 1">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="Signupclicked:" destination="kAX-4H-QQ9" eventType="touchUpInside" id="e7K-Bh-gvr"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="marker" translatesAutoresizingMaskIntoConstraints="NO" id="uyj-hV-n3d">
                                 <rect key="frame" x="41" y="521" width="35" height="30"/>
@@ -1767,6 +1784,13 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <connections>
+                        <outlet property="birthday" destination="slo-sR-3X1" id="1bh-tH-vUv"/>
+                        <outlet property="cpicker" destination="RWb-54-vuE" id="LcU-Ma-Itn"/>
+                        <outlet property="lblplus" destination="pKL-Be-LpR" id="e4j-4M-jDN"/>
+                        <outlet property="location" destination="xKb-ri-htM" id="tVN-yd-nWP"/>
+                        <outlet property="phonenum" destination="ofE-zU-wXY" id="T9s-vy-eET"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qyl-dN-ujk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

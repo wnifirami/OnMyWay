@@ -100,10 +100,6 @@ class ViewController: UIViewController {
                     defaults.set(val[0]["adresse"]!, forKey: "adresse")
                     defaults.set(val[0]["DateNaissance"]!, forKey: "DateNaissance")
                     defaults.set(self.password.text!, forKey: "normalpassword")
-
-                    
-
-                    
                     defaults.set(true, forKey: "loggedIn")
  
                 }
@@ -125,6 +121,7 @@ class ViewController: UIViewController {
            }
     
     @IBAction func notmemberPressed(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "join", sender: self)
     }
     
 }
