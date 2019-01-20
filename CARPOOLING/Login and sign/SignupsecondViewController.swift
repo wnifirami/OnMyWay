@@ -22,7 +22,7 @@ class SignupsecondViewController: UIViewController,MRCountryPickerDelegate  {
     @IBOutlet weak var birthday: UITextField!
     @IBOutlet weak var lblplus: UILabel!
     
-
+var urlstore = "http://marwen1994.alwaysdata.net/Carpooling/public/storeUser"
     override func viewDidLoad() {
         super.viewDidLoad()
         cpicker.countryPickerDelegate = self
@@ -54,13 +54,62 @@ class SignupsecondViewController: UIViewController,MRCountryPickerDelegate  {
       datepicker?.datePickerMode = .date
     }
     
-    @IBAction func Signupclicked(_ sender: UIButton) {
-    }
+   
     func countryPhoneCodePicker(_ picker: MRCountryPicker, didSelectCountryWithName name: String, countryCode: String, phoneCode: String, flag: UIImage) {
         // self.countryName.text = name
         //  self.countryCode.text = countryCode
         self.lblplus.text = phoneCode
         
+        
+    }
+    public func StoreUser(name:String,email:String,password:String,num_tel:String,adresse:String,DateNaissance:String,flag:Bool, completionHandler: @escaping (Bool) -> Void ) {
+        let parameters: Parameters=[
+            "email":email,
+            "name":name,
+            "password":password,
+            "num_tel":num_tel,
+            "adresse":adresse,
+            "DateNaissance":DateNaissance,
+            ]
+        Alamofire.request(urlstore, method: .post, parameters: parameters).responseJSON
+            {
+                response  in
+                if let result = response.result.value  {
+                    let jsonData = result as! NSDictionary
+                    print(jsonData)
+                    let val = jsonData.value(forKey: "result") as! String
+                    if (val.count) != 0 {
+                        let resp = val
+                        print(resp)
+                        
+                        if resp == "true" {
+                            print("added")
+                            
+                        }
+                        else{
+                           print("network error")
+                            
+                        }
+                        
+                    }
+                    completionHandler(true)
+                    
+                }
+        }
+    }
+    
+    
+    @IBAction func signup(_ sender: UIButton) {
+        if self.phonenum.text != "" && self.birthday.text != "" && self.location.text != "" {
+            let defaults = UserDefaults.standard
+            
+            StoreUser(name:defaults.string(forKey: "usernameadd")!,email: defaults.string(forKey: "emailadd")!, password: defaults.string(forKey: "passwordadd")!, num_tel: self.phonenum.text!, adresse: self.location.text!, DateNaissance: self.birthday.text!,flag: true,completionHandler: { success in
+                
+            })
+        }
+        else {
+            print("3abbi les champs")
+        }
         
     }
     
