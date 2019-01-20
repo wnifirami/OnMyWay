@@ -13,9 +13,7 @@ pod 'Cosmos'
 pod "Floaty", "~> 4.1.0"
 pod ‘StepIndicator’, '~> 1.0.6’
 pod 'IQKeyboardManagerSwift'
-pod 'DatePickerDialog'
 pod 'SwiftSpinner'
-
 
 
 
