@@ -42,4 +42,8 @@ class SignupfirstViewController: UIViewController {
             print("3abbi les champs")
         }
     }
+    
+    @IBAction func backloginfirst(_ sender: UIButton) {
+        performSegue(withIdentifier: "bloginone", sender: self)
+    }
 }
