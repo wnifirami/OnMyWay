@@ -104,7 +104,7 @@ var urlstore = "http://marwen1994.alwaysdata.net/Carpooling/public/storeUser"
             let defaults = UserDefaults.standard
             
             StoreUser(name:defaults.string(forKey: "usernameadd")!,email: defaults.string(forKey: "emailadd")!, password: defaults.string(forKey: "passwordadd")!, num_tel: self.phonenum.text!, adresse: self.location.text!, DateNaissance: self.birthday.text!,flag: true,completionHandler: { success in
-                  performSegue(withIdentifier: "blogintwo", sender: self)
+                  self.performSegue(withIdentifier: "blogintwo", sender: self)
             })
         }
         else {
