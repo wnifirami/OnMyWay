@@ -51,8 +51,25 @@ class AcceuilViewController: UIViewController,UITableViewDelegate,UITableViewDat
 
         return cell!
     }
-
-   
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "det" {
+            //send parametre when we perform segue to details of the bar
+            let barinfo = segue.destination as? DetailsViewController
+            let indexPath = pubTable.indexPathForSelectedRow?.row
+            var Annonce = AnnoncesArray[indexPath!] as! Dictionary<String , Any>
+            barinfo?.nameimgcar = "http://marwen1994.alwaysdata.net/Carpooling/public/brahim/"+"\(Annonce["imageVoiture"] as! String)"+".jpeg"
+            barinfo?.desc = (Annonce["Description"] as? String)!
+            barinfo?.cartypename = (Annonce["type"] as? String)!
+            barinfo?.userimgname =  "http://marwen1994.alwaysdata.net/Carpooling/public/brahim/"+"\(Annonce["imageuser"] as! String)"+".jpeg"
+            barinfo?.date =  (Annonce["datedeplassement"] as? String)!
+                barinfo?.prix =  (Annonce["prix"] as? String)!
+            barinfo?.destination = "\(Annonce["adresseDepart"] as! String)  --> \(Annonce["adresseArrive"] as! String)"
+        }
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "det", sender: self)
+        
+    }
     func GetAll( flag:Bool, completionHandler: @escaping (Bool) -> Void ) {
         
         
