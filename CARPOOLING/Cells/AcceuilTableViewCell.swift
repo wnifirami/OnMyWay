@@ -10,9 +10,7 @@ import UIKit
 
 class AcceuilTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var datecircuitlbl: UILabel!
-    @IBOutlet weak var circuitlbl: UILabel!
-    @IBOutlet weak var carimg: UIImageView!
+ 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

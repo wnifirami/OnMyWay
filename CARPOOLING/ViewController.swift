@@ -48,7 +48,7 @@ class ViewController: UIViewController {
                         if resp == "true" {
                        
                             self.login(email: self.email.text!, password: self.password.text!,flag: true,completionHandler: { success in
-                                
+                                self.performSegue(withIdentifier: "toacceuil", sender: self)
                             })
                         }
                         else{
