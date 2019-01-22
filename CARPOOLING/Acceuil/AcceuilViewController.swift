@@ -63,6 +63,7 @@ class AcceuilViewController: UIViewController,UITableViewDelegate,UITableViewDat
             barinfo?.userimgname =  "http://marwen1994.alwaysdata.net/Carpooling/public/brahim/"+"\(Annonce["imageuser"] as! String)"+".jpeg"
             barinfo?.date =  (Annonce["datedeplassement"] as? String)!
                 barinfo?.prix =  (Annonce["prix"] as? String)!
+             barinfo?.idannonce =  (Annonce["idAnnonce"] as? String)!
             barinfo?.destination = "\(Annonce["adresseDepart"] as! String)  --> \(Annonce["adresseArrive"] as! String)"
         }
     }

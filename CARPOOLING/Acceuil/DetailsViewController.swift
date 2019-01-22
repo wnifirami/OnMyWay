@@ -27,6 +27,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var rateview: CosmosView!
     @IBOutlet weak var userimg: UIImageView!
     var userimgname = ""
+    var idannonce = ""
     override func viewDidLoad() {
         super.viewDidLoad()
 carimg?.af_setImage(withURL: URL(string: nameimgcar)!)
@@ -42,13 +43,24 @@ carimg?.af_setImage(withURL: URL(string: nameimgcar)!)
     }
     
     @IBAction func callAction(_ sender: UIButton) {
+        if let phoneURL = NSURL(string: ("tel://0021622222222" )) {
+            let alert = UIAlertController(title: ("Call 0021622222222 ?"), message: nil, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Call", style: .default, handler: { (action) in
+                UIApplication.shared.openURL(phoneURL as URL)
+            }))
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
    
     @IBAction func sendrequestClicked(_ sender: UIButton) {
+        
     }
     
     @IBAction func feedbackclicked(_ sender: UIButton) {
+        performSegue(withIdentifier: "feeds", sender: self)
     }
     
     

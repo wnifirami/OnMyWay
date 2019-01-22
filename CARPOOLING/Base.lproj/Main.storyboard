@@ -995,11 +995,6 @@
                                                 <rect key="frame" x="23" y="256" width="329" height="164"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTx-Sn-kU0">
-                                                        <rect key="frame" x="248" y="53" width="46" height="45"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <state key="normal" image="chat" backgroundImage="whitebg"/>
-                                                    </button>
                                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UkI-Rm-jHN" customClass="CosmosView" customModule="Cosmos">
                                                         <rect key="frame" x="56" y="123" width="217" height="33"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1023,12 +1018,17 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1s-Kb-Lih">
-                                                        <rect key="frame" x="20" y="60" width="46" height="45"/>
+                                                        <rect key="frame" x="20" y="50" width="53" height="55"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <state key="normal" image="phone" backgroundImage="whitebg"/>
                                                         <connections>
                                                             <action selector="callAction:" destination="4Ja-G0-n7A" eventType="touchUpInside" id="eW5-29-ch2"/>
                                                         </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTx-Sn-kU0">
+                                                        <rect key="frame" x="248" y="50" width="55" height="55"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" image="chat" backgroundImage="whitebg"/>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1275,6 +1275,7 @@
                         <outlet property="prixlbl" destination="1Nj-iv-9ax" id="5VT-Xt-fh2"/>
                         <outlet property="rateview" destination="UkI-Rm-jHN" id="MKy-b7-cla"/>
                         <outlet property="userimg" destination="eFU-Xn-tEZ" id="i90-23-LMv"/>
+                        <segue destination="Dfa-sg-NYX" kind="presentation" identifier="feeds" id="nkI-2U-4vV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbo-K3-Z83" userLabel="First Responder" sceneMemberID="firstResponder"/>
