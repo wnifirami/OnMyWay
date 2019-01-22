@@ -8,24 +8,37 @@
 //
 
 import UIKit
-
+import Alamofire
+import AlamofireImage
 class ProfileViewController: UIViewController {
+    @IBOutlet weak var namelbl: UILabel!
+    
+    @IBOutlet weak var email: UILabel!
+    @IBOutlet weak var phone: UILabel!
+    @IBOutlet weak var adress: UILabel!
+    @IBOutlet weak var userimg: UIImageView!
+    var id_user = UserDefaults.standard.string(forKey: "id")!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+email.text = UserDefaults.standard.string(forKey: "email")!
+        phone.text = UserDefaults.standard.string(forKey: "num_tel")!
+        adress.text = UserDefaults.standard.string(forKey: "adresse")!
+        namelbl.text = UserDefaults.standard.string(forKey: "name")!
+        print(UserDefaults.standard.string(forKey: "imageusr")!)
+        if UserDefaults.standard.string(forKey: "imageusr")! != nil {
+            let imgn = "http://marwen1994.alwaysdata.net/Carpooling/public/brahim/"+"\(UserDefaults.standard.string(forKey: "imageusr")!)"+".jpeg"
+            
+            
+            userimg.af_setImage(withURL: URL(string: imgn)!)
+        }
 
         // Do any additional setup after loading the view.
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+  
+    @IBAction func uploadpic(_ sender: UIButton) {
     }
-    */
-
+    
 }

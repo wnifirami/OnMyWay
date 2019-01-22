@@ -92,7 +92,13 @@ class ViewController: UIViewController {
                     let val = jsonData.value(forKey: "items") as! [[String:Any]]
                     print(val[0]["name"]!)
                     let defaults = UserDefaults.standard
-
+                    var image = ""
+                    if val[0]["image"]! != nil {
+                        image = val[0]["image"]! as! String
+                        defaults.set(image, forKey: "imageusr")
+print(val[0]["image"]!)
+                    }
+                  
                     defaults.set(val[0]["name"]!, forKey: "name")
                     defaults.set(val[0]["email"]!, forKey: "email")
                     defaults.set(val[0]["id"]!, forKey: "id")
