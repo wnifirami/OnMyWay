@@ -12,6 +12,10 @@
 		06795A5C21F527B20070D506 /* AcceuilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06795A5B21F527AC0070D506 /* AcceuilViewController.swift */; };
 		06795A5E21F528C50070D506 /* AcceuilTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06795A5D21F528C40070D506 /* AcceuilTableViewCell.swift */; };
 		0682B10521F731ED001FE6D9 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0682B10421F731EC001FE6D9 /* DetailsViewController.swift */; };
+		0682B10821F74EAD001FE6D9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0682B10721F74EAC001FE6D9 /* ProfileViewController.swift */; };
+		0682B10B21F74FFA001FE6D9 /* AnnoncefirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0682B10A21F74FFA001FE6D9 /* AnnoncefirstViewController.swift */; };
+		0682B10D21F7503A001FE6D9 /* AnnoncesecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0682B10C21F7503A001FE6D9 /* AnnoncesecondViewController.swift */; };
+		0682B10F21F7505C001FE6D9 /* AnnoncethirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0682B10E21F7505C001FE6D9 /* AnnoncethirdViewController.swift */; };
 		06A259B121F2116000929A1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A259B021F2116000929A1F /* AppDelegate.swift */; };
 		06A259B321F2116000929A1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A259B221F2116000929A1F /* ViewController.swift */; };
 		06A259B621F2116000929A1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06A259B421F2116000929A1F /* Main.storyboard */; };
@@ -29,6 +33,10 @@
 		06795A5B21F527AC0070D506 /* AcceuilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceuilViewController.swift; sourceTree = "<group>"; };
 		06795A5D21F528C40070D506 /* AcceuilTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceuilTableViewCell.swift; sourceTree = "<group>"; };
 		0682B10421F731EC001FE6D9 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		0682B10721F74EAC001FE6D9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		0682B10A21F74FFA001FE6D9 /* AnnoncefirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnoncefirstViewController.swift; sourceTree = "<group>"; };
+		0682B10C21F7503A001FE6D9 /* AnnoncesecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnoncesecondViewController.swift; sourceTree = "<group>"; };
+		0682B10E21F7505C001FE6D9 /* AnnoncethirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnoncethirdViewController.swift; sourceTree = "<group>"; };
 		06A259AD21F2116000929A1F /* CARPOOLING.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CARPOOLING.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06A259B021F2116000929A1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06A259B221F2116000929A1F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +90,24 @@
 			path = Acceuil;
 			sourceTree = "<group>";
 		};
+		0682B10621F74E75001FE6D9 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				0682B10721F74EAC001FE6D9 /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		0682B10921F74FD6001FE6D9 /* Annonces */ = {
+			isa = PBXGroup;
+			children = (
+				0682B10A21F74FFA001FE6D9 /* AnnoncefirstViewController.swift */,
+				0682B10C21F7503A001FE6D9 /* AnnoncesecondViewController.swift */,
+				0682B10E21F7505C001FE6D9 /* AnnoncethirdViewController.swift */,
+			);
+			path = Annonces;
+			sourceTree = "<group>";
+		};
 		06A259A421F2116000929A1F = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +129,8 @@
 		06A259AF21F2116000929A1F /* CARPOOLING */ = {
 			isa = PBXGroup;
 			children = (
+				0682B10921F74FD6001FE6D9 /* Annonces */,
+				0682B10621F74E75001FE6D9 /* Profile */,
 				06795A5A21F527250070D506 /* Acceuil */,
 				06795A5521F386810070D506 /* Cells */,
 				06795A5421F3866B0070D506 /* Login and sign */,
@@ -281,14 +309,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				06A259B921F2116000929A1F /* CARPOOLING.xcdatamodeld in Sources */,
+				0682B10D21F7503A001FE6D9 /* AnnoncesecondViewController.swift in Sources */,
 				06795A5721F386AA0070D506 /* SignupfirstViewController.swift in Sources */,
 				06A259B321F2116000929A1F /* ViewController.swift in Sources */,
 				06795A5E21F528C50070D506 /* AcceuilTableViewCell.swift in Sources */,
 				06795A5C21F527B20070D506 /* AcceuilViewController.swift in Sources */,
 				06A259C721F2143000929A1F /* GradientView.swift in Sources */,
+				0682B10821F74EAD001FE6D9 /* ProfileViewController.swift in Sources */,
 				06A259B121F2116000929A1F /* AppDelegate.swift in Sources */,
+				0682B10B21F74FFA001FE6D9 /* AnnoncefirstViewController.swift in Sources */,
 				06A259C921F2264E00929A1F /* CardView.swift in Sources */,
 				06795A5921F3D7230070D506 /* SignupsecondViewController.swift in Sources */,
+				0682B10F21F7505C001FE6D9 /* AnnoncethirdViewController.swift in Sources */,
 				0682B10521F731ED001FE6D9 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

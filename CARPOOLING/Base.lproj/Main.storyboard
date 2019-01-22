@@ -457,16 +457,18 @@
                         <outlet property="pubTable" destination="QxB-Ia-aEg" id="mR6-YK-3Gl"/>
                         <outlet property="searchbar" destination="Lvo-kd-KR7" id="eMb-8A-Q9D"/>
                         <segue destination="4Ja-G0-n7A" kind="showDetail" identifier="det" id="KG4-MW-e0N"/>
+                        <segue destination="jWD-Pa-Evs" kind="show" identifier="showprof" id="TKL-Oy-HYl"/>
+                        <segue destination="Fpy-LV-ML7" kind="presentation" identifier="addannonce" id="glM-U3-mZh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e5D-6A-ClF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2980" y="-306.29685157421289"/>
         </scene>
-        <!--View Controller-->
+        <!--Annoncesecond View Controller-->
         <scene sceneID="Zb9-Pe-oyU">
             <objects>
-                <viewController id="hpb-S9-L0Q" sceneMemberID="viewController">
+                <viewController id="hpb-S9-L0Q" customClass="AnnoncesecondViewController" customModule="CARPOOLING" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VPT-ab-AfJ" customClass="GradientView" customModule="CARPOOLING" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -588,10 +590,10 @@
             </objects>
             <point key="canvasLocation" x="2925.5999999999999" y="1037.6311844077961"/>
         </scene>
-        <!--View Controller-->
+        <!--Annoncethird View Controller-->
         <scene sceneID="G4K-tn-wcK">
             <objects>
-                <viewController id="FK4-fN-vqy" sceneMemberID="viewController">
+                <viewController id="FK4-fN-vqy" customClass="AnnoncethirdViewController" customModule="CARPOOLING" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yKy-YQ-kMZ" customClass="GradientView" customModule="CARPOOLING" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -722,10 +724,10 @@
             </objects>
             <point key="canvasLocation" x="3740" y="1029.5352323838081"/>
         </scene>
-        <!--View Controller-->
+        <!--Annoncefirst View Controller-->
         <scene sceneID="0BL-EC-4gj">
             <objects>
-                <viewController id="Fpy-LV-ML7" sceneMemberID="viewController">
+                <viewController id="Fpy-LV-ML7" customClass="AnnoncefirstViewController" customModule="CARPOOLING" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iTI-Pg-K07" customClass="GradientView" customModule="CARPOOLING" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -778,7 +780,7 @@
                                 </view>
                                 <blurEffect style="light"/>
                             </visualEffectView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sK5-Ow-ZxH">
+                            <searchBar contentMode="redraw" fixedFrame="YES" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sK5-Ow-ZxH">
                                 <rect key="frame" x="0.0" y="114" width="375" height="56"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" red="0.0" green="0.5725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -826,7 +828,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="40f-Qk-JEz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2024.8" y="450.22488755622192"/>
+            <point key="canvasLocation" x="1922" y="880"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="i0r-7q-D5Q">
@@ -971,7 +973,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kgb-vO-NGm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2928.8000000000002" y="374.66266866566718"/>
+            <point key="canvasLocation" x="1178" y="1324"/>
         </scene>
         <!--Details View Controller-->
         <scene sceneID="Q1r-5c-asr">
@@ -1020,7 +1022,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1s-Kb-Lih">
                                                         <rect key="frame" x="20" y="50" width="53" height="55"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <state key="normal" image="phone" backgroundImage="whitebg"/>
+                                                        <state key="normal" image="mobile" backgroundImage="whitebg"/>
                                                         <connections>
                                                             <action selector="callAction:" destination="4Ja-G0-n7A" eventType="touchUpInside" id="eW5-29-ch2"/>
                                                         </connections>
@@ -1028,7 +1030,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTx-Sn-kU0">
                                                         <rect key="frame" x="248" y="50" width="55" height="55"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <state key="normal" image="chat" backgroundImage="whitebg"/>
+                                                        <state key="normal" image="chatmsgnew" backgroundImage="whitebg"/>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1280,12 +1282,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbo-K3-Z83" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3714.4000000000001" y="60.26986506746627"/>
+            <point key="canvasLocation" x="3740" y="-607"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="ZbW-VP-dSG">
             <objects>
-                <viewController id="jWD-Pa-Evs" sceneMemberID="viewController">
+                <viewController id="jWD-Pa-Evs" customClass="ProfileViewController" customModule="CARPOOLING" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QcK-00-hMg" customClass="GradientView" customModule="CARPOOLING" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1483,7 +1485,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CIg-Su-dyr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4485.6000000000004" y="466.41679160419795"/>
+            <point key="canvasLocation" x="4678" y="735"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Sa8-4R-bWP">
@@ -1911,7 +1913,7 @@
         <image name="Rectangle arrondi 1" width="1158" height="169"/>
         <image name="calendar" width="35" height="35"/>
         <image name="car" width="35" height="35"/>
-        <image name="chat" width="35" height="35"/>
+        <image name="chatmsgnew" width="35" height="35"/>
         <image name="commentbtn" width="35" height="35"/>
         <image name="description" width="35" height="35"/>
         <image name="editprofilecolor" width="35" height="35"/>
@@ -1921,7 +1923,6 @@
         <image name="marker" width="35" height="35"/>
         <image name="mobile" width="35" height="35"/>
         <image name="pass" width="35" height="35"/>
-        <image name="phone" width="35" height="35"/>
         <image name="price" width="35" height="35"/>
         <image name="ramrampic" width="379" height="379"/>
         <image name="starbtn" width="35" height="35"/>
