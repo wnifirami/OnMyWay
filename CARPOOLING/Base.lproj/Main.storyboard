@@ -109,7 +109,7 @@
                         <outlet property="logo" destination="Srt-g7-zjG" id="FyC-cC-1HU"/>
                         <outlet property="password" destination="MVt-8p-GJk" id="Fp3-59-I55"/>
                         <segue destination="t76-oq-EAL" kind="show" identifier="join" id="HOj-8g-FMe"/>
-                        <segue destination="hNv-ez-94o" kind="show" identifier="toacceuil" id="pbh-Pr-GaH"/>
+                        <segue destination="2Dq-jq-i5b" kind="show" identifier="toacceuil" id="pbh-Pr-GaH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -457,13 +457,13 @@
                         <outlet property="pubTable" destination="QxB-Ia-aEg" id="mR6-YK-3Gl"/>
                         <outlet property="searchbar" destination="Lvo-kd-KR7" id="eMb-8A-Q9D"/>
                         <segue destination="Fpy-LV-ML7" kind="presentation" identifier="addannonce" id="glM-U3-mZh"/>
-                        <segue destination="4Ja-G0-n7A" kind="show" id="Ix5-tq-7Iq"/>
-                        <segue destination="jWD-Pa-Evs" kind="showDetail" identifier="showprof" id="zsS-mq-0Gd"/>
+                        <segue destination="4Ja-G0-n7A" kind="show" identifier="det" id="Ix5-tq-7Iq"/>
+                        <segue destination="jWD-Pa-Evs" kind="show" identifier="showprof" id="7Rn-ye-gaf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e5D-6A-ClF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2980" y="-306.29685157421289"/>
+            <point key="canvasLocation" x="3919.1999999999998" y="-306.29685157421289"/>
         </scene>
         <!--Annoncesecond View Controller-->
         <scene sceneID="Zb9-Pe-oyU">
@@ -1303,7 +1303,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbo-K3-Z83" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3740" y="-607"/>
+            <point key="canvasLocation" x="4679.1999999999998" y="-607.1964017991005"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="ZbW-VP-dSG">
@@ -1329,9 +1329,9 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXV-zZ-BoW">
-                                <rect key="frame" x="237" y="98" width="62" height="63"/>
+                                <rect key="frame" x="284" y="80" width="53" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="uploadpic" backgroundImage="whitebg"/>
+                                <state key="normal" image="image" backgroundImage="whitebg"/>
                                 <connections>
                                     <action selector="uploadpic:" destination="jWD-Pa-Evs" eventType="touchUpInside" id="BTI-1q-hy1"/>
                                 </connections>
@@ -1413,13 +1413,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Upload your picture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LOb-G0-0jQ">
-                                <rect key="frame" x="220" y="178" width="139" height="19"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EW2-xO-XgJ" customClass="CardView" customModule="CARPOOLING" customModuleProvider="target">
                                 <rect key="frame" x="16" y="491" width="343" height="89"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1467,6 +1460,16 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Evi-Ww-7vR">
+                                <rect key="frame" x="284" y="157" width="53" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="uploadpic" backgroundImage="whitebg">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="newuploadbtn:" destination="jWD-Pa-Evs" eventType="touchUpInside" id="Qu6-R5-5Og"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Rew-eB-sak"/>
@@ -1785,7 +1788,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Feo-M1-TkT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4480.8000000000002" y="-208.24587706146929"/>
+            <point key="canvasLocation" x="5420" y="-208.24587706146929"/>
         </scene>
         <!--Signupsecond View Controller-->
         <scene sceneID="Cb1-hG-a6C">
@@ -1927,26 +1930,22 @@
             <point key="canvasLocation" x="721" y="500"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="RJs-KL-agj">
+        <scene sceneID="MuX-vo-UNS">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gyr-x1-ZgH" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2Dq-jq-i5b" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="L8o-bq-mEx">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jUs-a2-Epl">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.0" green="0.54117647058823526" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="hNv-ez-94o" kind="relationship" relationship="rootViewController" id="VYy-Ht-gYs"/>
+                        <segue destination="hNv-ez-94o" kind="relationship" relationship="rootViewController" id="HJi-to-Osj"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3Wq-vH-4ud" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pw5-sB-Icv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1988" y="-373.76311844077964"/>
+            <point key="canvasLocation" x="2980" y="-306.29685157421289"/>
         </scene>
     </scenes>
     <resources>
@@ -1961,6 +1960,7 @@
         <image name="editprofilecolor" width="35" height="35"/>
         <image name="email" width="35" height="35"/>
         <image name="exit" width="35" height="35"/>
+        <image name="image" width="35" height="35"/>
         <image name="logo" width="302" height="178"/>
         <image name="logoutcolor" width="35" height="35"/>
         <image name="marker" width="35" height="35"/>
@@ -1974,7 +1974,6 @@
         <image name="whitebg" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VYy-Ht-gYs"/>
         <segue reference="iN0-5P-UHo"/>
     </inferredMetricsTieBreakers>
 </document>
