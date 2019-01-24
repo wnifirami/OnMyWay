@@ -46,5 +46,9 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Allow App to show your location</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Show your location in the map </string>
 </dict>
 </plist>

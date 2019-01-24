@@ -789,6 +789,9 @@
                                             <state key="normal" title="Cancel" backgroundImage="Rectangle arrondi 1">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
+                                            <connections>
+                                                <action selector="cancelbtnclicked:" destination="Fpy-LV-ML7" eventType="touchUpInside" id="Wnh-bm-wB5"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AeD-Kw-W2C">
                                             <rect key="frame" x="229" y="28" width="114" height="36"/>
@@ -796,6 +799,9 @@
                                             <state key="normal" title="Next" backgroundImage="Rectangle arrondi 1">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
+                                            <connections>
+                                                <action selector="nextbtnclicked:" destination="Fpy-LV-ML7" eventType="touchUpInside" id="niv-wG-Ngs"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </view>
@@ -846,6 +852,10 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <connections>
+                        <outlet property="map" destination="Sqa-5P-4m9" id="5RQ-hE-taR"/>
+                        <segue destination="hpb-S9-L0Q" kind="show" identifier="steptwo" id="lMU-bu-jsc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="40f-Qk-JEz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
