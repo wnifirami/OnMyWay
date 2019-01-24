@@ -13,6 +13,8 @@ class AnnoncefirstViewController: UIViewController,UISearchBarDelegate ,CLLocati
     @IBOutlet weak var viewbtn: UIButton!
     var langit = ""
     var latit = ""
+    var showlangit = 0.0
+    var showlatit = 0.0
     let manager = CLLocationManager()
     var lang = ""
     var lat = ""
@@ -73,7 +75,24 @@ class AnnoncefirstViewController: UIViewController,UISearchBarDelegate ,CLLocati
     }
     
     @IBAction func viewbtnclicked(_ sender: Any) {
+        let latitude:CLLocationDegrees = self.showlatit
+        let longitude:CLLocationDegrees = self.showlangit
+        
+        
+        
+        let regionDistance:CLLocationDistance = 1000;
+        let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
+        let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
+        
+        let options = [MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center), MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)]
+        
+        let placemark = MKPlacemark(coordinate: coordinates)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = "Your way"
+        mapItem.openInMaps(launchOptions: options)
     }
+    
+    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         UIApplication.shared.beginIgnoringInteractionEvents()
         let activityIndicator = UIActivityIndicatorView ()
@@ -107,10 +126,13 @@ class AnnoncefirstViewController: UIViewController,UISearchBarDelegate ,CLLocati
                 annotation.title = searchBar.text
                 annotation.coordinate = CLLocationCoordinate2DMake(latitude!, langitude!)
                 self.map.addAnnotation(annotation)
+                self.showlangit = langitude!
+                self.showlatit = latitude!
                 self.lang = "\(langitude!)"
                 self.lat = "\(latitude!)"
                 //zoom
                 let coordonate:CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude!, langitude!)
+                
                 print(latitude!)
                 print(langitude!)
                 let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
@@ -128,6 +150,7 @@ class AnnoncefirstViewController: UIViewController,UISearchBarDelegate ,CLLocati
         let mylocation : CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude,location.coordinate.longitude )
         let region:MKCoordinateRegion = MKCoordinateRegion(center: mylocation, span: span)
         // mymap.setRegion(region, animated: true)
+    
         self.langit = "" + "\(mylocation.longitude) "
         self.latit = "" + "\(mylocation.latitude) "
         print(mylocation.latitude)
