@@ -36,6 +36,7 @@ carimg?.af_setImage(withURL: URL(string: nameimgcar)!)
         userimg?.af_setImage(withURL: URL(string: userimgname)!)
         destinationlbl.text = destination
         cartype.text = cartypename
+        Desclbl.text = desc
         prixlbl.text = prix
         datelbl.text = date
         destinationlbl.text = destination

@@ -10,6 +10,7 @@ import UIKit
 import CoreLocation
 import MapKit
 class AnnoncefirstViewController: UIViewController,UISearchBarDelegate ,CLLocationManagerDelegate {
+    @IBOutlet weak var nextbtn: UIButton!
     @IBOutlet weak var viewbtn: UIButton!
     var langit = ""
     var latit = ""
@@ -21,6 +22,8 @@ class AnnoncefirstViewController: UIViewController,UISearchBarDelegate ,CLLocati
     @IBOutlet weak var map: MKMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewbtn.isHidden = true
+        nextbtn.isHidden = true
         manager.delegate = self as! CLLocationManagerDelegate
         manager.desiredAccuracy = kCLLocationAccuracyBest
         manager.requestWhenInUseAuthorization()
@@ -60,9 +63,12 @@ class AnnoncefirstViewController: UIViewController,UISearchBarDelegate ,CLLocati
     }*/
 
     @IBAction func nextbtnclicked(_ sender: UIButton) {
+
         performSegue(withIdentifier: "steptwo", sender: self)
+        
     }
     @IBAction func cancelbtnclicked(_ sender: Any) {
+        
         self.dismiss(animated: true, completion: nil)
 
     }
@@ -106,6 +112,9 @@ class AnnoncefirstViewController: UIViewController,UISearchBarDelegate ,CLLocati
         
         let searchRequest = MKLocalSearch.Request()
         searchRequest.naturalLanguageQuery = searchBar.text
+        let defaults = UserDefaults.standard
+        
+        defaults.set(searchBar.text!, forKey: "arrive")
         let activesearch = MKLocalSearch(request: searchRequest)
         activesearch.start { (response, error) in
             activityIndicator.stopAnimating()
@@ -128,6 +137,10 @@ class AnnoncefirstViewController: UIViewController,UISearchBarDelegate ,CLLocati
                 self.map.addAnnotation(annotation)
                 self.showlangit = langitude!
                 self.showlatit = latitude!
+                let defaults = UserDefaults.standard
+
+                defaults.set(langitude!, forKey: "langitude")
+                defaults.set(latitude!, forKey: "latitude")
                 self.lang = "\(langitude!)"
                 self.lat = "\(latitude!)"
                 //zoom
@@ -138,6 +151,8 @@ class AnnoncefirstViewController: UIViewController,UISearchBarDelegate ,CLLocati
                 let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
                 let region = MKCoordinateRegion(center: coordonate, span: span)
                 self.map.setRegion(region, animated: true)
+                self.viewbtn.isHidden = false
+                self.nextbtn.isHidden = false
                 
                 
             }
@@ -154,6 +169,26 @@ class AnnoncefirstViewController: UIViewController,UISearchBarDelegate ,CLLocati
         self.langit = "" + "\(mylocation.longitude) "
         self.latit = "" + "\(mylocation.latitude) "
         print(mylocation.latitude)
+        CLGeocoder().reverseGeocodeLocation(location) { (placemark, error) in
+            if error != nil {
+                
+                print ("there is an error")
+            }
+            else{
+                
+                if let place = placemark?[0] {
+                     print(place.country!)
+                    let defaults = UserDefaults.standard
+                    
+                    defaults.set(place.country!, forKey: "depart")
+                    if let checker = place.subThoroughfare {
+                        print(place.subThoroughfare!)
+                        print(place.region!)
+                    }
+                }
+            }
+
+        }
         // self.mymap.showsUserLocation = true;
         
     }

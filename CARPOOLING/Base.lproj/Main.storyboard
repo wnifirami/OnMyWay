@@ -501,6 +501,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.98431372549999996" green="0.58431372550000005" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="stepperClicked:" destination="hpb-S9-L0Q" eventType="valueChanged" id="L8v-Xj-Jei"/>
+                                </connections>
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Places Number : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSY-mC-tqO">
                                 <rect key="frame" x="170" y="195" width="130" height="21"/>
@@ -531,11 +534,11 @@
                                 <rect key="frame" x="44" y="377" width="45" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2uu-ht-edR">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Youe description here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2uu-ht-edR">
                                 <rect key="frame" x="109" y="377" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
+                                <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -545,6 +548,9 @@
                                 <state key="normal" title="Cancel" backgroundImage="Rectangle arrondi 1">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="Cancelbtnclicked:" destination="hpb-S9-L0Q" eventType="touchUpInside" id="IWL-Yc-Nu5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKb-oH-Hxc">
                                 <rect key="frame" x="235" y="587" width="114" height="36"/>
@@ -552,6 +558,9 @@
                                 <state key="normal" title="Next" backgroundImage="Rectangle arrondi 1">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="nextbtnClicked:" destination="hpb-S9-L0Q" eventType="touchUpInside" id="JNi-YJ-nUU"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -592,6 +601,13 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <connections>
+                        <outlet property="desctxt" destination="2uu-ht-edR" id="5Rc-0f-o6L"/>
+                        <outlet property="nbrplaces" destination="7GG-CE-gTi" id="xs2-yQ-yp7"/>
+                        <outlet property="pricetxt" destination="s2X-ZB-4Ee" id="L98-fS-N6q"/>
+                        <outlet property="stepper" destination="sy3-m4-GW6" id="eqN-FX-9Ls"/>
+                        <segue destination="FK4-fN-vqy" kind="show" identifier="stepthree" id="Qt9-CN-Zr7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JAT-eG-M6z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -624,6 +640,9 @@
                                 <rect key="frame" x="272" y="286" width="50" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="uploadpic" backgroundImage="whitebg"/>
+                                <connections>
+                                    <action selector="uploadClicked:" destination="FK4-fN-vqy" eventType="touchUpInside" id="f2O-dW-kbw"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VT3-5J-iai" customClass="StepIndicatorView" customModule="StepIndicator">
                                 <rect key="frame" x="0.0" y="66" width="375" height="50"/>
@@ -686,6 +705,9 @@
                                 <state key="normal" title="Done" backgroundImage="Rectangle arrondi 1">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="DonebtnisClicked:" destination="FK4-fN-vqy" eventType="touchUpInside" id="lPg-LS-Bb4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYK-XL-Tcy">
                                 <rect key="frame" x="48" y="585" width="114" height="36"/>
@@ -693,6 +715,17 @@
                                 <state key="normal" title="Cancel" backgroundImage="Rectangle arrondi 1">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="cancelbtnclicked:" destination="FK4-fN-vqy" eventType="touchUpInside" id="bCH-Yj-vyp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0RK-hf-7Gm">
+                                <rect key="frame" x="325" y="145" width="50" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="image" backgroundImage="whitebg"/>
+                                <connections>
+                                    <action selector="choosepicClicked:" destination="FK4-fN-vqy" eventType="touchUpInside" id="3Ao-Et-b68"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -733,6 +766,12 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <connections>
+                        <outlet property="carimg" destination="jNQ-pt-Mx7" id="nEE-Ls-5qc"/>
+                        <outlet property="cartypetxt" destination="Zsf-iH-7sY" id="BO1-3d-zrJ"/>
+                        <outlet property="datetxt" destination="PDX-pS-CpA" id="qFb-6j-TvV"/>
+                        <outlet property="uploadbtn" destination="u4I-ET-2mA" id="1W4-WM-dhM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HG5-KZ-ifq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -808,7 +847,7 @@
                                 <blurEffect style="light"/>
                             </visualEffectView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WfD-1s-d1W">
-                                <rect key="frame" x="311" y="519" width="48" height="47"/>
+                                <rect key="frame" x="301" y="507" width="58" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="view" backgroundImage="whitebg"/>
                                 <connections>
@@ -818,12 +857,12 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I want to go to" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aF6-zr-Rbl">
                                 <rect key="frame" x="41" y="29" width="223" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTl-5D-KaH">
-                                <rect key="frame" x="319" y="29" width="30" height="36"/>
+                                <rect key="frame" x="329" y="31" width="30" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="find"/>
                                 <connections>
@@ -871,6 +910,7 @@
                     </view>
                     <connections>
                         <outlet property="map" destination="Sqa-5P-4m9" id="5RQ-hE-taR"/>
+                        <outlet property="nextbtn" destination="AeD-Kw-W2C" id="6E5-So-G33"/>
                         <outlet property="viewbtn" destination="WfD-1s-d1W" id="h5g-wH-ot7"/>
                         <segue destination="hpb-S9-L0Q" kind="show" identifier="steptwo" id="lMU-bu-jsc"/>
                     </connections>
@@ -1043,7 +1083,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LYu-DO-MBm" customClass="CardView" customModule="CARPOOLING" customModuleProvider="target">
-                                                <rect key="frame" x="23" y="256" width="329" height="164"/>
+                                                <rect key="frame" x="23" y="216" width="329" height="164"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UkI-Rm-jHN" customClass="CosmosView" customModule="Cosmos">
@@ -1102,7 +1142,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l8A-s6-3Uw" customClass="CardView" customModule="CARPOOLING" customModuleProvider="target">
-                                                <rect key="frame" x="23" y="603" width="329" height="351"/>
+                                                <rect key="frame" x="23" y="576" width="329" height="351"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="calendar" translatesAutoresizingMaskIntoConstraints="NO" id="vA8-0a-MX6">
@@ -1201,7 +1241,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ramrampic" translatesAutoresizingMaskIntoConstraints="NO" id="eFU-Xn-tEZ" customClass="SwiftyAvatar" customModule="SwiftyAvatar">
-                                                <rect key="frame" x="121" y="197" width="133" height="128"/>
+                                                <rect key="frame" x="121" y="138" width="133" height="128"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="roundness">
@@ -1216,7 +1256,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GdB-cb-lkM" customClass="CardView" customModule="CARPOOLING" customModuleProvider="target">
-                                                <rect key="frame" x="23" y="444" width="329" height="131"/>
+                                                <rect key="frame" x="23" y="408" width="329" height="131"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="description" translatesAutoresizingMaskIntoConstraints="NO" id="Zck-zL-Bh2">
