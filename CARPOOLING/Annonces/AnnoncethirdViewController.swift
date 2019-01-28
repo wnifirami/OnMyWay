@@ -47,7 +47,7 @@ datepicker = UIDatePicker()
         StoreAnnonce( flag: true,completionHandler: { success in
             // print(self.BarsArray.count)
             print("compdone")
-self.performSegue(withIdentifier: "backtohome", sender: self)
+            self.dismiss(animated: true, completion: nil)
         })
     }
     

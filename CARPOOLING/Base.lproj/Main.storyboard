@@ -496,7 +496,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minimumValue="1" maximumValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="sy3-m4-GW6">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minimumValue="1" maximumValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="sy3-m4-GW6">
                                 <rect key="frame" x="44" y="191" width="94" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -512,7 +512,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7GG-CE-gTi">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7GG-CE-gTi">
                                 <rect key="frame" x="323" y="195" width="11" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -786,7 +786,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9qd-Ez-4DX" customClass="StepIndicatorView" customModule="StepIndicator">
-                                <rect key="frame" x="0.0" y="66" width="375" height="48"/>
+                                <rect key="frame" x="0.0" y="116" width="375" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.56470588235294117" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
@@ -812,7 +812,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Sqa-5P-4m9">
-                                <rect key="frame" x="0.0" y="116" width="375" height="456"/>
+                                <rect key="frame" x="0.0" y="172" width="375" height="400"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wdo-1O-8er">
@@ -855,14 +855,14 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I want to go to" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aF6-zr-Rbl">
-                                <rect key="frame" x="41" y="29" width="223" height="36"/>
+                                <rect key="frame" x="41" y="75" width="223" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTl-5D-KaH">
-                                <rect key="frame" x="329" y="31" width="30" height="32"/>
+                                <rect key="frame" x="315" y="75" width="30" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="find"/>
                                 <connections>
@@ -1383,7 +1383,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ramrampic" translatesAutoresizingMaskIntoConstraints="NO" id="ch6-fk-vol">
-                                <rect key="frame" x="32" y="80" width="146" height="139"/>
+                                <rect key="frame" x="25" y="126" width="146" height="139"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="roundness">
@@ -1397,16 +1397,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXV-zZ-BoW">
-                                <rect key="frame" x="284" y="80" width="53" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="image" backgroundImage="whitebg"/>
-                                <connections>
-                                    <action selector="uploadpic:" destination="jWD-Pa-Evs" eventType="touchUpInside" id="BTI-1q-hy1"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TZK-hS-FWw" customClass="CardView" customModule="CARPOOLING" customModuleProvider="target">
-                                <rect key="frame" x="16" y="267" width="343" height="190"/>
+                                <rect key="frame" x="16" y="332" width="343" height="190"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mobile" translatesAutoresizingMaskIntoConstraints="NO" id="2Lo-kR-i6Z">
@@ -1483,35 +1475,23 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EW2-xO-XgJ" customClass="CardView" customModule="CARPOOLING" customModuleProvider="target">
-                                <rect key="frame" x="16" y="491" width="343" height="89"/>
+                                <rect key="frame" x="16" y="566" width="343" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Border" translatesAutoresizingMaskIntoConstraints="NO" id="3Db-9r-TdI">
-                                        <rect key="frame" x="0.0" y="43" width="343" height="6"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logoutcolor" translatesAutoresizingMaskIntoConstraints="NO" id="oBC-Rb-tTX">
+                                        <rect key="frame" x="0.0" y="8" width="32" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="editprofilecolor" translatesAutoresizingMaskIntoConstraints="NO" id="SHK-KV-mba">
-                                        <rect key="frame" x="9" y="6" width="30" height="29"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vpc-a4-smF">
-                                        <rect key="frame" x="76" y="8" width="267" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Edit your profile">
-                                            <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jb2-EN-To3">
-                                        <rect key="frame" x="76" y="53" width="267" height="33"/>
+                                        <rect key="frame" x="76" y="8" width="267" height="33"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Lougout">
                                             <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="LogoutbtnClicked:" destination="jWD-Pa-Evs" eventType="touchUpInside" id="Rwi-Zv-4tc"/>
+                                        </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logoutcolor" translatesAutoresizingMaskIntoConstraints="NO" id="oBC-Rb-tTX">
-                                        <rect key="frame" x="7" y="49" width="32" height="32"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
@@ -1530,13 +1510,21 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Evi-Ww-7vR">
-                                <rect key="frame" x="284" y="157" width="53" height="52"/>
+                                <rect key="frame" x="260" y="242" width="53" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="uploadpic" backgroundImage="whitebg">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="newuploadbtn:" destination="jWD-Pa-Evs" eventType="touchUpInside" id="Qu6-R5-5Og"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXV-zZ-BoW">
+                                <rect key="frame" x="260" y="126" width="53" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="image" backgroundImage="whitebg"/>
+                                <connections>
+                                    <action selector="uploadpic:" destination="jWD-Pa-Evs" eventType="touchUpInside" id="BTI-1q-hy1"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1583,7 +1571,9 @@
                         <outlet property="email" destination="v4s-9v-ZGx" id="143-N7-bwd"/>
                         <outlet property="namelbl" destination="MG5-2I-9Xb" id="wxj-un-zg0"/>
                         <outlet property="phone" destination="R4Y-nU-fTU" id="ryT-vl-WaV"/>
+                        <outlet property="uploadbtn" destination="Evi-Ww-7vR" id="1Kz-xt-4Ou"/>
                         <outlet property="userimg" destination="ch6-fk-vol" id="qVS-kL-Zpe"/>
+                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="logout" id="mjp-y5-yAa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CIg-Su-dyr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2104,7 +2094,6 @@
         <image name="chatmsgnew" width="35" height="35"/>
         <image name="commentbtn" width="35" height="35"/>
         <image name="description" width="35" height="35"/>
-        <image name="editprofilecolor" width="35" height="35"/>
         <image name="email" width="35" height="35"/>
         <image name="exit" width="35" height="35"/>
         <image name="find" width="35" height="35"/>
@@ -2122,6 +2111,6 @@
         <image name="whitebg" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="iN0-5P-UHo"/>
+        <segue reference="mjp-y5-yAa"/>
     </inferredMetricsTieBreakers>
 </document>

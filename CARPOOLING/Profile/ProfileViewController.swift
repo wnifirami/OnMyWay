@@ -12,6 +12,9 @@ import Alamofire
 import AlamofireImage
 class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 let imagePicker = UIImagePickerController()
+    
+    @IBOutlet weak var uploadbtn: UIButton!
+    
     @IBOutlet weak var namelbl: UILabel!
     let urlupload = "http://marwen1994.alwaysdata.net/Carpooling/public/setimg"
     @IBOutlet weak var email: UILabel!
@@ -22,6 +25,7 @@ let imagePicker = UIImagePickerController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        uploadbtn.isHidden = true
 email.text = UserDefaults.standard.string(forKey: "email")!
         phone.text = UserDefaults.standard.string(forKey: "num_tel")!
         adress.text = UserDefaults.standard.string(forKey: "adresse")!
@@ -54,7 +58,8 @@ imagePicker.delegate = self
         }
         
         userimg.image = image
-       
+        uploadbtn.isHidden = false
+
         self.dismiss(animated: true, completion: nil)
         // self.uploadimage ()
     }
@@ -95,4 +100,13 @@ imagePicker.delegate = self
     @IBAction func newuploadbtn(_ sender: UIButton) {
         self.uploadimage ()
     }
+    
+    
+    
+    @IBAction func LogoutbtnClicked(_ sender: UIButton) {
+        performSegue(withIdentifier: "logout", sender: self)
+    }
+    
+    
+    
 }
