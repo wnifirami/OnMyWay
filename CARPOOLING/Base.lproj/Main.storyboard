@@ -456,9 +456,9 @@
                     <connections>
                         <outlet property="pubTable" destination="QxB-Ia-aEg" id="mR6-YK-3Gl"/>
                         <outlet property="searchbar" destination="Lvo-kd-KR7" id="eMb-8A-Q9D"/>
-                        <segue destination="Fpy-LV-ML7" kind="presentation" identifier="addannonce" id="glM-U3-mZh"/>
-                        <segue destination="4Ja-G0-n7A" kind="show" identifier="det" id="Ix5-tq-7Iq"/>
+                        <segue destination="nNb-oO-cMM" kind="presentation" identifier="addannonce" id="glM-U3-mZh"/>
                         <segue destination="jWD-Pa-Evs" kind="show" identifier="showprof" id="7Rn-ye-gaf"/>
+                        <segue destination="4Ja-G0-n7A" kind="show" identifier="det" id="KMz-bg-Z9F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e5D-6A-ClF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -611,7 +611,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JAT-eG-M6z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2925.5999999999999" y="1037.6311844077961"/>
+            <point key="canvasLocation" x="3864.8000000000002" y="1037.6311844077961"/>
         </scene>
         <!--Annoncethird View Controller-->
         <scene sceneID="G4K-tn-wcK">
@@ -775,7 +775,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HG5-KZ-ifq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3740" y="1029.5352323838081"/>
+            <point key="canvasLocation" x="4679.1999999999998" y="1029.5352323838081"/>
         </scene>
         <!--Annoncefirst View Controller-->
         <scene sceneID="0BL-EC-4gj">
@@ -908,6 +908,7 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <navigationItem key="navigationItem" id="Ge6-0x-UuG"/>
                     <connections>
                         <outlet property="map" destination="Sqa-5P-4m9" id="5RQ-hE-taR"/>
                         <outlet property="nextbtn" destination="AeD-Kw-W2C" id="6E5-So-G33"/>
@@ -917,7 +918,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="40f-Qk-JEz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1920.8" y="879.31034482758628"/>
+            <point key="canvasLocation" x="2860" y="879.31034482758628"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="i0r-7q-D5Q">
@@ -1587,12 +1588,62 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CIg-Su-dyr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4677.6000000000004" y="734.48275862068976"/>
+            <point key="canvasLocation" x="5616.8000000000002" y="734.48275862068976"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="32v-Wt-SKA">
+            <objects>
+                <viewController id="3Gt-lN-d7i" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ItZ-sA-rwm" customClass="GradientView" customModule="CARPOOLING" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ijr-1c-eSP"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                                <color key="value" red="0.0" green="0.83137254900000002" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                                <color key="value" red="0.0" green="0.54117647059999996" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowX">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowY">
+                                <real key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowBlur">
+                                <real key="value" value="18"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="startPointX">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="startPointY">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="endPointX">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="endPointY">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fNB-fc-aqU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6671.1999999999998" y="744.3778110944528"/>
+        </scene>
+        <!--Feeds View Controller-->
         <scene sceneID="Sa8-4R-bWP">
             <objects>
-                <viewController id="Dfa-sg-NYX" sceneMemberID="viewController">
+                <viewController id="Dfa-sg-NYX" customClass="FeedsViewController" customModule="CARPOOLING" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yff-wi-pV8" customClass="GradientView" customModule="CARPOOLING" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1631,11 +1682,6 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVb-eu-pje">
-                                            <rect key="frame" x="304" y="26" width="54" height="56"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" image="starbtn" backgroundImage="whitebg"/>
-                                        </button>
                                     </subviews>
                                 </view>
                                 <blurEffect style="light"/>
@@ -1647,7 +1693,7 @@
                                 <color key="separatorColor" red="0.0" green="0.83137254900000002" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.0078431372550000003" green="0.86666666670000003" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="102" id="7M2-ti-iIL">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="comment" rowHeight="102" id="7M2-ti-iIL">
                                         <rect key="frame" x="0.0" y="28" width="375" height="102"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7M2-ti-iIL" id="1dm-lN-YgQ">
@@ -1694,7 +1740,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ramrampic" translatesAutoresizingMaskIntoConstraints="NO" id="K42-PG-9bc" customClass="SwiftyAvatar" customModule="SwiftyAvatar">
+                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ramrampic" translatesAutoresizingMaskIntoConstraints="NO" id="K42-PG-9bc" customClass="SwiftyAvatar" customModule="SwiftyAvatar">
                                                     <rect key="frame" x="15" y="14" width="77" height="77"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <userDefinedRuntimeAttributes>
@@ -1709,7 +1755,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="c'esy un homme gentil et il m'a beacoup aidé, je le recommande" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLK-kj-9AE">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="c'esy un homme gentil et il m'a beacoup aidé, je le recommande" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLK-kj-9AE">
                                                     <rect key="frame" x="121" y="14" width="223" height="77"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -1764,6 +1810,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Dfa-sg-NYX" id="Iqu-05-IAw"/>
+                                    <outlet property="delegate" destination="Dfa-sg-NYX" id="aJP-5M-Su9"/>
+                                </connections>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gGz-ZU-TEC">
                                 <rect key="frame" x="0.0" y="39" width="375" height="44"/>
@@ -1779,6 +1829,9 @@
                                                 <rect key="frame" x="16" y="4.5" width="35" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" backgroundImage="exit"/>
+                                                <connections>
+                                                    <action selector="closebtnclicked:" destination="Dfa-sg-NYX" eventType="touchUpInside" id="Zil-ab-OIf"/>
+                                                </connections>
                                             </button>
                                         </barButtonItem>
                                     </navigationItem>
@@ -1809,6 +1862,9 @@
                                             <rect key="frame" x="316" y="35" width="38" height="36"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" image="commentbtn" backgroundImage="whitebg"/>
+                                            <connections>
+                                                <action selector="commentbtnclicked:" destination="Dfa-sg-NYX" eventType="touchUpInside" id="PJl-iE-tMq"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </view>
@@ -1853,6 +1909,11 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <connections>
+                        <outlet property="commenttv" destination="bz0-c2-p8V" id="V7r-L1-psF"/>
+                        <outlet property="commenttxt" destination="Gp6-HC-J3m" id="WwW-m2-Jdz"/>
+                        <outlet property="ratingview" destination="gtH-OA-bwI" id="aK2-tT-hsH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Feo-M1-TkT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2013,7 +2074,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pw5-sB-Icv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2980" y="-306.29685157421289"/>
+            <point key="canvasLocation" x="2926" y="-498"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eSe-Hn-XTS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nNb-oO-cMM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lVh-23-vTr">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Fpy-LV-ML7" kind="relationship" relationship="rootViewController" id="T3u-KL-D4e"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rGO-Vg-B43" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1920.8" y="879.31034482758628"/>
         </scene>
     </scenes>
     <resources>
@@ -2037,7 +2116,6 @@
         <image name="pass" width="35" height="35"/>
         <image name="price" width="35" height="35"/>
         <image name="ramrampic" width="379" height="379"/>
-        <image name="starbtn" width="35" height="35"/>
         <image name="uploadpic" width="35" height="35"/>
         <image name="user" width="35" height="35"/>
         <image name="view" width="35" height="35"/>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		061E0AE321FDE6ED00D7F539 /* FeedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061E0AE221FDE6ED00D7F539 /* FeedsViewController.swift */; };
 		06795A5721F386AA0070D506 /* SignupfirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06795A5621F386AA0070D506 /* SignupfirstViewController.swift */; };
 		06795A5921F3D7230070D506 /* SignupsecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06795A5821F3D71F0070D506 /* SignupsecondViewController.swift */; };
 		06795A5C21F527B20070D506 /* AcceuilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06795A5B21F527AC0070D506 /* AcceuilViewController.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		061E0AE221FDE6ED00D7F539 /* FeedsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsViewController.swift; sourceTree = "<group>"; };
 		06795A5621F386AA0070D506 /* SignupfirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupfirstViewController.swift; sourceTree = "<group>"; };
 		06795A5821F3D71F0070D506 /* SignupsecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupsecondViewController.swift; sourceTree = "<group>"; };
 		06795A5B21F527AC0070D506 /* AcceuilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceuilViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 			children = (
 				06795A5B21F527AC0070D506 /* AcceuilViewController.swift */,
 				0682B10421F731EC001FE6D9 /* DetailsViewController.swift */,
+				061E0AE221FDE6ED00D7F539 /* FeedsViewController.swift */,
 			);
 			path = Acceuil;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				06A259B321F2116000929A1F /* ViewController.swift in Sources */,
 				06795A5E21F528C50070D506 /* AcceuilTableViewCell.swift in Sources */,
 				06795A5C21F527B20070D506 /* AcceuilViewController.swift in Sources */,
+				061E0AE321FDE6ED00D7F539 /* FeedsViewController.swift in Sources */,
 				06A259C721F2143000929A1F /* GradientView.swift in Sources */,
 				0682B10821F74EAD001FE6D9 /* ProfileViewController.swift in Sources */,
 				06A259B121F2116000929A1F /* AppDelegate.swift in Sources */,
