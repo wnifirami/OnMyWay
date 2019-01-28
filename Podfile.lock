@@ -5,6 +5,8 @@ PODS:
   - Cosmos (18.0.1)
   - Floaty (4.1.0)
   - IQKeyboardManagerSwift (6.2.0)
+  - JGProgressHUD (2.0.3)
+  - JSSAlertView (4.2.0)
   - MRCountryPicker (0.0.8)
   - StepIndicator (1.0.6.1)
   - SwiftSpinner (1.6.2)
@@ -16,6 +18,8 @@ DEPENDENCIES:
   - Cosmos
   - Floaty (~> 4.1.0)
   - IQKeyboardManagerSwift
+  - JGProgressHUD
+  - JSSAlertView
   - MRCountryPicker (~> 0.0.8)
   - StepIndicator (~> 1.0.6)
   - SwiftSpinner
@@ -28,6 +32,8 @@ SPEC REPOS:
     - Cosmos
     - Floaty
     - IQKeyboardManagerSwift
+    - JGProgressHUD
+    - JSSAlertView
     - MRCountryPicker
     - StepIndicator
     - SwiftSpinner
@@ -39,11 +45,13 @@ SPEC CHECKSUMS:
   Cosmos: 7dfaa3f52584ca5f94ab74b5c2e264019cc9f7f5
   Floaty: 1a4e213f3512cf3045ef9cb0c1ff456226d1f66a
   IQKeyboardManagerSwift: b07ccf9d8cafe993dcd6cb794eb4ba34611a0c4e
+  JGProgressHUD: 12b20a8f4ffe05258f8635c1ab92816e451f904d
+  JSSAlertView: 84ec53a0cbcfaa25a09293751356afed09484023
   MRCountryPicker: 1aeea66de25cdef79dce3b91d8ad9db643c1cc01
   StepIndicator: 73b4bcc8bcf816cb98479d99ada7e85463252caa
   SwiftSpinner: 3a4c6dea425e5a31b908a8b1dd5dcd1ad4d96340
   SwiftyAvatar: 33aecda825c91851cac2aabd06b33f3698b2414c
 
-PODFILE CHECKSUM: d14cfc1d5eb33e74e1a5fe5348fb0913f533af36
+PODFILE CHECKSUM: d653a9dcebbd3386762cdc686607b9d5717bc0b4
 
 COCOAPODS: 1.6.0.beta.2

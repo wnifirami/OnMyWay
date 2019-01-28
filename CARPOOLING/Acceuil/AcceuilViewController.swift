@@ -10,6 +10,8 @@ import UIKit
 import Alamofire
 import AlamofireImage
 import Floaty
+import JGProgressHUD
+
 class AcceuilViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
    var urlgetAll = "http://marwen1994.alwaysdata.net/Carpooling/public/getallPostnew"
     
@@ -42,9 +44,17 @@ class AcceuilViewController: UIViewController,UITableViewDelegate,UITableViewDat
         })
         self.view.addSubview(floaty)
         GetAll( flag: true,completionHandler: { success in
+            let hud1 = JGProgressHUD(style: .light)
+            hud1.textLabel.text = "Loading..."
+            
+            hud1.progress = 0.5
+            //hud.show(in: self, animated: true)
+            hud1.show(in: self.view)
             // print(self.BarsArray.count)
             print("compdone")
             self.pubTable.reloadData()
+            hud1.dismiss()
+
         })
 
         // Do any additional setup after loading the view.

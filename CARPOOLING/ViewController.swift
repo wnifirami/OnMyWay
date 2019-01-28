@@ -7,7 +7,9 @@
 //
 
 import UIKit
+import JSSAlertView
 import Alamofire
+import JGProgressHUD
 class ViewController: UIViewController {
     @IBOutlet weak var email: UITextField!
     
@@ -30,6 +32,12 @@ class ViewController: UIViewController {
     }
     
     public func checkUser(email:String,password:String,flag:Bool, completionHandler: @escaping (Bool) -> Void ) {
+        let hud1 = JGProgressHUD(style: .light)
+        hud1.textLabel.text = "Authentification..."
+        
+        hud1.progress = 0.5
+        //hud.show(in: self, animated: true)
+        hud1.show(in: self.view)
         let parameters: Parameters=[
             "email":email,
             "password":password,
@@ -44,6 +52,7 @@ class ViewController: UIViewController {
                     if (val.count) != 0 {
                         let resp = val
                         print(resp)
+                        hud1.dismiss()
 
                         if resp == "true" {
                        
@@ -52,10 +61,21 @@ class ViewController: UIViewController {
                             })
                         }
                         else{
+                            JSSAlertView().show(
+                                self, // the parent view controller of the alert
+                                title: "Please check your email or password", // the alert's title
+                                delay: 2 // time in secs
+                            )
                            
-                            
                         }
                     
+                    }
+                    else {
+                        JSSAlertView().show(
+                            self, // the parent view controller of the alert
+                            title: " Please check your network ", // the alert's title
+                            delay: 2 // time in secs
+                        )
                     }
                 completionHandler(true)
                 
