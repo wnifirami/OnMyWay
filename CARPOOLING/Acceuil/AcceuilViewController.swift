@@ -14,9 +14,10 @@ import JGProgressHUD
 
 class AcceuilViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
    var urlgetAll = "http://marwen1994.alwaysdata.net/Carpooling/public/getallPostnew"
-    
+    var fetching = false
     @IBOutlet weak var pubTable: UITableView!
     var AnnoncesArray = [AnyObject]()
+    var AnnoncesArrayFiltred = [AnyObject]()
 
     @IBOutlet weak var searchbar: UISearchBar!
     override func viewDidLoad() {
@@ -59,8 +60,93 @@ class AcceuilViewController: UIViewController,UITableViewDelegate,UITableViewDat
 
         // Do any additional setup after loading the view.
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let floaty = Floaty()
+        floaty.addItem("Add post", icon: UIImage(named: "addannoncenew")!, handler: { item in
+            self.performSegue(withIdentifier: "addannonce", sender: self)
+            //            let alert = UIAlertController(title: "Hey", message: "I'm hungry...", preferredStyle: .Alert)
+            //            alert.addAction(UIAlertAction(title: "Me too", style: .Default, handler: nil))
+            //            self.presentViewController(alert, animated: true, completion: nil)
+            floaty.close()
+        })
+        floaty.addItem("Profile", icon: UIImage(named: "user")!, handler: { item in
+            self.performSegue(withIdentifier: "showprof", sender: self)
+            //            let alert = UIAlertController(title: "Hey", message: "I'm hungry...", preferredStyle: .Alert)
+            //            alert.addAction(UIAlertAction(title: "Me too", style: .Default, handler: nil))
+            //            self.presentViewController(alert, animated: true, completion: nil)
+            floaty.close()
+        })
+        floaty.addItem("Chat", icon: UIImage(named: "chatmsgnew")!, handler: { item in
+            //            let alert = UIAlertController(title: "Hey", message: "I'm hungry...", preferredStyle: .Alert)
+            //            alert.addAction(UIAlertAction(title: "Me too", style: .Default, handler: nil))
+            //            self.presentViewController(alert, animated: true, completion: nil)
+            floaty.close()
+        })
+        self.view.addSubview(floaty)
+        GetAll( flag: true,completionHandler: { success in
+            let hud1 = JGProgressHUD(style: .light)
+            hud1.textLabel.text = "Loading..."
+            
+            hud1.progress = 0.5
+            //hud.show(in: self, animated: true)
+            hud1.show(in: self.view)
+            // print(self.BarsArray.count)
+            print("compdone")
+            self.pubTable.reloadData()
+            hud1.dismiss()
+            
+        })
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let floaty = Floaty()
+        floaty.addItem("Add post", icon: UIImage(named: "addannoncenew")!, handler: { item in
+            self.performSegue(withIdentifier: "addannonce", sender: self)
+            //            let alert = UIAlertController(title: "Hey", message: "I'm hungry...", preferredStyle: .Alert)
+            //            alert.addAction(UIAlertAction(title: "Me too", style: .Default, handler: nil))
+            //            self.presentViewController(alert, animated: true, completion: nil)
+            floaty.close()
+        })
+        floaty.addItem("Profile", icon: UIImage(named: "user")!, handler: { item in
+            self.performSegue(withIdentifier: "showprof", sender: self)
+            //            let alert = UIAlertController(title: "Hey", message: "I'm hungry...", preferredStyle: .Alert)
+            //            alert.addAction(UIAlertAction(title: "Me too", style: .Default, handler: nil))
+            //            self.presentViewController(alert, animated: true, completion: nil)
+            floaty.close()
+        })
+        floaty.addItem("Chat", icon: UIImage(named: "chatmsgnew")!, handler: { item in
+            //            let alert = UIAlertController(title: "Hey", message: "I'm hungry...", preferredStyle: .Alert)
+            //            alert.addAction(UIAlertAction(title: "Me too", style: .Default, handler: nil))
+            //            self.presentViewController(alert, animated: true, completion: nil)
+            floaty.close()
+        })
+        self.view.addSubview(floaty)
+        GetAll( flag: true,completionHandler: { success in
+            let hud1 = JGProgressHUD(style: .light)
+            hud1.textLabel.text = "Loading..."
+            
+            hud1.progress = 0.5
+            //hud.show(in: self, animated: true)
+            hud1.show(in: self.view)
+            // print(self.BarsArray.count)
+            print("compdone")
+            self.pubTable.reloadData()
+            hud1.dismiss()
+            
+        })
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return AnnoncesArray.count    }
+        var count = 0
+        
+        if fetching {
+            count = AnnoncesArrayFiltred.count
+        }
+        else {
+            count = AnnoncesArray.count
+        }
+        
+        return count    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = pubTable.dequeueReusableCell(withIdentifier: "cellAcc")
@@ -70,7 +156,14 @@ class AcceuilViewController: UIViewController,UITableViewDelegate,UITableViewDat
          let userimg = cell?.viewWithTag(4)as? UIImageView
          let nbrPlaces = cell?.viewWithTag(5) as? UILabel
          let prix = cell?.viewWithTag(6) as? UILabel
-        var annonce = AnnoncesArray[indexPath.row] as! Dictionary<String , Any>
+        var annonce : Dictionary<String , Any>
+        if fetching {
+            annonce = AnnoncesArrayFiltred[indexPath.row] as! Dictionary<String , Any>
+        }
+        else {
+             annonce = AnnoncesArray[indexPath.row] as! Dictionary<String , Any>
+
+        }
         direction?.text = "\(annonce["adresseDepart"] as! String)  --> \(annonce["adresseArrive"] as! String)"
         date?.text = annonce["datedeplassement"] as! String
         nbrPlaces?.text = annonce["nbrPlace"] as! String
@@ -133,4 +226,24 @@ class AcceuilViewController: UIViewController,UITableViewDelegate,UITableViewDat
     }
     
 
+    
+}
+extension AcceuilViewController : UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        AnnoncesArrayFiltred = AnnoncesArray.filter({($0["adresseArrive"] as! String).lowercased().contains(searchText.lowercased())  })
+        fetching = true
+        if(searchText == "") {
+fetching = false
+            
+        }
+        self.pubTable.reloadData()
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        fetching = false
+        searchbar.text = ""
+        self.pubTable.reloadData()
+
+        
+    }
 }
