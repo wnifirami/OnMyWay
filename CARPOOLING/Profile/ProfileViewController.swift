@@ -10,6 +10,8 @@
 import UIKit
 import Alamofire
 import AlamofireImage
+import JGProgressHUD
+
 class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 let imagePicker = UIImagePickerController()
     
@@ -98,7 +100,15 @@ imagePicker.delegate = self
     
     
     @IBAction func newuploadbtn(_ sender: UIButton) {
+        let hud1 = JGProgressHUD(style: .light)
+        hud1.textLabel.text = "Upload your pic in progress..."
+        
+        hud1.progress = 0.5
+        //hud.show(in: self, animated: true)
+        hud1.show(in: self.view)
         self.uploadimage ()
+        hud1.dismiss()
+
     }
     
     

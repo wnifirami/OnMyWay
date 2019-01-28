@@ -292,7 +292,7 @@
                                                     <rect key="frame" x="17" y="7" width="340" height="245"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="4RG-Bp-IQ8">
+                                                        <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="noimg" translatesAutoresizingMaskIntoConstraints="NO" id="4RG-Bp-IQ8">
                                                             <rect key="frame" x="190" y="0.0" width="150" height="193"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         </imageView>
@@ -332,7 +332,7 @@
                                                             <rect key="frame" x="0.0" y="192" width="340" height="53"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <subviews>
-                                                                <imageView userInteractionEnabled="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ramrampic" translatesAutoresizingMaskIntoConstraints="NO" id="6OO-1t-dsw" customClass="SwiftyAvatar" customModule="SwiftyAvatar">
+                                                                <imageView userInteractionEnabled="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="noavatar" translatesAutoresizingMaskIntoConstraints="NO" id="6OO-1t-dsw" customClass="SwiftyAvatar" customModule="SwiftyAvatar">
                                                                     <rect key="frame" x="17" y="0.0" width="59" height="53"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <userDefinedRuntimeAttributes>
@@ -621,7 +621,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="jNQ-pt-Mx7">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="noimg" translatesAutoresizingMaskIntoConstraints="NO" id="jNQ-pt-Mx7">
                                 <rect key="frame" x="0.0" y="145" width="375" height="167"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <userDefinedRuntimeAttributes>
@@ -954,7 +954,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ramrampic" translatesAutoresizingMaskIntoConstraints="NO" id="7nn-Uw-Wib" customClass="SwiftyAvatar" customModule="SwiftyAvatar">
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="noavatar" translatesAutoresizingMaskIntoConstraints="NO" id="7nn-Uw-Wib" customClass="SwiftyAvatar" customModule="SwiftyAvatar">
                                                                         <rect key="frame" x="44" y="11" width="96" height="96"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <userDefinedRuntimeAttributes>
@@ -1079,7 +1079,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BrK-HI-F4x" customClass="GradientView" customModule="CARPOOLING" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="QBV-Pn-87K">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="noimg" translatesAutoresizingMaskIntoConstraints="NO" id="QBV-Pn-87K">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="189"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -1217,7 +1217,7 @@
                                                             <action selector="feedbackclicked:" destination="4Ja-G0-n7A" eventType="touchUpInside" id="Loo-YP-h28"/>
                                                         </connections>
                                                     </button>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="m5A-Je-yPO">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="noimg" translatesAutoresizingMaskIntoConstraints="NO" id="m5A-Je-yPO">
                                                         <rect key="frame" x="209" y="97" width="112" height="84"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     </imageView>
@@ -1241,7 +1241,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ramrampic" translatesAutoresizingMaskIntoConstraints="NO" id="eFU-Xn-tEZ" customClass="SwiftyAvatar" customModule="SwiftyAvatar">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="noavatar" translatesAutoresizingMaskIntoConstraints="NO" id="eFU-Xn-tEZ" customClass="SwiftyAvatar" customModule="SwiftyAvatar">
                                                 <rect key="frame" x="121" y="138" width="133" height="128"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <userDefinedRuntimeAttributes>
@@ -1382,7 +1382,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ramrampic" translatesAutoresizingMaskIntoConstraints="NO" id="ch6-fk-vol">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="noavatar" translatesAutoresizingMaskIntoConstraints="NO" id="ch6-fk-vol">
                                 <rect key="frame" x="25" y="126" width="146" height="139"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <userDefinedRuntimeAttributes>
@@ -1730,7 +1730,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
-                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ramrampic" translatesAutoresizingMaskIntoConstraints="NO" id="K42-PG-9bc" customClass="SwiftyAvatar" customModule="SwiftyAvatar">
+                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="noavatar" translatesAutoresizingMaskIntoConstraints="NO" id="K42-PG-9bc" customClass="SwiftyAvatar" customModule="SwiftyAvatar">
                                                     <rect key="frame" x="15" y="14" width="77" height="77"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <userDefinedRuntimeAttributes>
@@ -2086,7 +2086,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1" width="768" height="425"/>
         <image name="Border" width="351" height="1"/>
         <image name="Rectangle arrondi 1" width="1158" height="169"/>
         <image name="calendar" width="35" height="35"/>
@@ -2102,9 +2101,10 @@
         <image name="logoutcolor" width="35" height="35"/>
         <image name="marker" width="35" height="35"/>
         <image name="mobile" width="35" height="35"/>
+        <image name="noavatar" width="512" height="512"/>
+        <image name="noimg" width="275" height="183"/>
         <image name="pass" width="35" height="35"/>
         <image name="price" width="35" height="35"/>
-        <image name="ramrampic" width="379" height="379"/>
         <image name="uploadpic" width="35" height="35"/>
         <image name="user" width="35" height="35"/>
         <image name="view" width="35" height="35"/>

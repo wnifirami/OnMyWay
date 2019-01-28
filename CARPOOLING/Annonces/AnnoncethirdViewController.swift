@@ -9,6 +9,8 @@
 import UIKit
 import Alamofire
 import AlamofireImage
+import JGProgressHUD
+import JSSAlertView
 class AnnoncethirdViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
     var urladdannonce = "http://marwen1994.alwaysdata.net/Carpooling/public/addPost"
     @IBOutlet weak var cartypetxt: UITextField!
@@ -80,7 +82,12 @@ datepicker = UIDatePicker()
     }
     
     func uploadimage () {
+        let hud1 = JGProgressHUD(style: .light)
+        hud1.textLabel.text = "Uploading your car pic still in progress..."
         
+        hud1.progress = 0.5
+        //hud.show(in: self, animated: true)
+        hud1.show(in: self.view)
         //hud.show(in: self, animated: true)
         let myUrl =  "http://marwen1994.alwaysdata.net/Carpooling/public/setimg"
         
@@ -105,13 +112,19 @@ datepicker = UIDatePicker()
                 
                 defaults.set(base64String!, forKey: "imagecode")
                 print("done upload pic")
-                
+                hud1.dismiss()
                 
         }
     }
     
     
     public func StoreAnnonce(flag:Bool, completionHandler: @escaping (Bool) -> Void ) {
+        let hud2 = JGProgressHUD(style: .light)
+        hud2.textLabel.text = "adding your post..."
+        
+        hud2.progress = 0.5
+        //hud.show(in: self, animated: true)
+        hud2.show(in: self.view)
         let parameters: Parameters=[
             "idUser":UserDefaults.standard.string(forKey: "id")!,
             "adresseDepart":UserDefaults.standard.string(forKey: "depart")!,
@@ -138,12 +151,15 @@ datepicker = UIDatePicker()
                         print(resp)
                         
                         if resp == "true" {
-                            print("added")
-                            
+hud2.dismiss()
                         }
                         else{
-                            print("network error")
-                            
+                            hud2.dismiss()
+                            JSSAlertView().show(
+                                self, // the parent view controller of the alert
+                                title: "Please check your network", // the alert's title
+                                delay: 3 // time in secs
+                            )
                         }
                         
                     }

@@ -9,6 +9,8 @@ import UIKit
 import Cosmos
 import Alamofire
 import AlamofireImage
+import JGProgressHUD
+
 class FeedsViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource{
     private let startRating:Double = 3.7
     var urlrate = "http://marwen1994.alwaysdata.net/Carpooling/public/Rating.php"
@@ -108,13 +110,22 @@ var urlcomment = "http://marwen1994.alwaysdata.net/Carpooling/public/getcomment.
     }
     
     @IBAction func commentbtnclicked(_ sender: Any) {
+        
         AddComments ( flag: true,completionHandler: { success in
             // print(self.BarsArray.count)
           print("comment added")
             self.GetAll( flag: true,completionHandler: { success in
+                let hud1 = JGProgressHUD(style: .light)
+                hud1.textLabel.text = "Refresh comment list..."
+                
+                hud1.progress = 0.5
+                //hud.show(in: self, animated: true)
+                hud1.show(in: self.view)
                 // print(self.BarsArray.count)
                 print("refreshed")
                 self.commenttv.reloadData()
+                hud1.dismiss()
+
             })
         })
      
