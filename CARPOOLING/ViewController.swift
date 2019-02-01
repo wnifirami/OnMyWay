@@ -12,7 +12,7 @@ import Alamofire
 import JGProgressHUD
 class ViewController: UIViewController {
     @IBOutlet weak var email: UITextField!
-    
+//    var  helloWorldTimer: Timer!
     @IBOutlet weak var logo: UIImageView!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var loginbtn: UIButton!
@@ -20,6 +20,9 @@ class ViewController: UIViewController {
     let urlcheck = "http://marwen1994.alwaysdata.net/Carpooling/public/checkUser"
     override func viewDidLoad() {
         super.viewDidLoad()
+//         helloWorldTimer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(ViewController.sayHello), userInfo: nil, repeats: true)
+//
+     
         UIView.animate(withDuration: 2, animations: {
             self.logo.frame.origin.y = 100
             sleep(1)
@@ -30,6 +33,10 @@ class ViewController: UIViewController {
         }, completion: {(finished:Bool) in
         })
     }
+//    @objc func sayHello()
+//    {
+//        print("hello World")
+//    }
     
     public func checkUser(email:String,password:String,flag:Bool, completionHandler: @escaping (Bool) -> Void ) {
         let hud1 = JGProgressHUD(style: .light)
@@ -58,6 +65,7 @@ class ViewController: UIViewController {
                        
                             self.login(email: self.email.text!, password: self.password.text!,flag: true,completionHandler: { success in
                                 self.performSegue(withIdentifier: "toacceuil", sender: self)
+//                                self.helloWorldTimer?.invalidate()
                             })
                         }
                         else{

@@ -103,22 +103,16 @@ class AcceuilViewController: UIViewController,UITableViewDelegate,UITableViewDat
         let floaty = Floaty()
         floaty.addItem("Add post", icon: UIImage(named: "addannoncenew")!, handler: { item in
             self.performSegue(withIdentifier: "addannonce", sender: self)
-            //            let alert = UIAlertController(title: "Hey", message: "I'm hungry...", preferredStyle: .Alert)
-            //            alert.addAction(UIAlertAction(title: "Me too", style: .Default, handler: nil))
-            //            self.presentViewController(alert, animated: true, completion: nil)
+  
             floaty.close()
         })
         floaty.addItem("Profile", icon: UIImage(named: "user")!, handler: { item in
             self.performSegue(withIdentifier: "showprof", sender: self)
-            //            let alert = UIAlertController(title: "Hey", message: "I'm hungry...", preferredStyle: .Alert)
-            //            alert.addAction(UIAlertAction(title: "Me too", style: .Default, handler: nil))
-            //            self.presentViewController(alert, animated: true, completion: nil)
+     
             floaty.close()
         })
         floaty.addItem("Chat", icon: UIImage(named: "chatmsgnew")!, handler: { item in
-            //            let alert = UIAlertController(title: "Hey", message: "I'm hungry...", preferredStyle: .Alert)
-            //            alert.addAction(UIAlertAction(title: "Me too", style: .Default, handler: nil))
-            //            self.presentViewController(alert, animated: true, completion: nil)
+          self.performSegue(withIdentifier: "tochat", sender: self)
             floaty.close()
         })
         self.view.addSubview(floaty)
