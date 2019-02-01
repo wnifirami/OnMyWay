@@ -11,12 +11,13 @@ import AlamofireImage
 import Alamofire
 class chatViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     var  timer: Timer!
-
+var urladdtext = "http://marwen1994.alwaysdata.net/Carpooling/public/addMessages.php"
     var chatArray = [AnyObject]()
 var urlgetmessages = "http://marwen1994.alwaysdata.net/Carpooling/public/getMessages.php"
     
     var idget = ""
 
+    @IBOutlet weak var chattxt: UITextField!
     @IBOutlet weak var tcchat: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -108,6 +109,42 @@ var urlgetmessages = "http://marwen1994.alwaysdata.net/Carpooling/public/getMess
         }
     }
 
-    
+    public func AddMessage(flag:Bool, completionHandler: @escaping (Bool) -> Void ) {
+        
+        
+        let parameters: Parameters=[
+            "idget":idget,
+            "message":self.chattxt.text!,
+            "idconn":UserDefaults.standard.string(forKey: "id")!,
+            
+            ]
+        Alamofire.request(urladdtext, method: .post, parameters: parameters).responseJSON
+            {
+                response in
+                
+                //    print(response)
+              
+                //getting the json value from the server
+                if let result = response.result.value {
+                    
+                    //converting it as NSDictionary
+                    let jsonData = result as! NSDictionary
+                    
+                    //displaying the message in label
+                    let val = jsonData.value(forKey: "response") as! String?
+                    print("commentaded")
+                    
+                }
+                completionHandler(true)
+                
+        }
+    }
    
+    @IBAction func sendmsgisclicked(_ sender: UIButton) {
+        AddMessage ( flag: true,completionHandler: { success in
+            // print(self.BarsArray.count)
+             self.chattxt.text = ""
+            })
+        
+    }
 }
