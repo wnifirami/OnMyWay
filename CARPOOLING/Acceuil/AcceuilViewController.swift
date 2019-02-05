@@ -11,10 +11,15 @@ import Alamofire
 import AlamofireImage
 import Floaty
 import JGProgressHUD
-
+import UserNotifications
 class AcceuilViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
    var urlgetAll = "http://marwen1994.alwaysdata.net/Carpooling/public/getallPostnew"
     var fetching = false
+    var  timernew: Timer!
+    let urldel = "http://marwen1994.alwaysdata.net/Carpooling/public/deletenotif.php"
+    var notifarray = [AnyObject]()
+
+var urlgetnotifs = "http://marwen1994.alwaysdata.net/Carpooling/public/getnotifi.php"
     @IBOutlet weak var pubTable: UITableView!
     var AnnoncesArray = [AnyObject]()
     var AnnoncesArrayFiltred = [AnyObject]()
@@ -22,25 +27,21 @@ class AcceuilViewController: UIViewController,UITableViewDelegate,UITableViewDat
     @IBOutlet weak var searchbar: UISearchBar!
     override func viewDidLoad() {
         super.viewDidLoad()
+        timernew = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(AcceuilViewController.Notifsget), userInfo: nil, repeats: true)
         let floaty = Floaty()
         floaty.addItem("Add post", icon: UIImage(named: "addannoncenew")!, handler: { item in
             self.performSegue(withIdentifier: "addannonce", sender: self)
-            //            let alert = UIAlertController(title: "Hey", message: "I'm hungry...", preferredStyle: .Alert)
-            //            alert.addAction(UIAlertAction(title: "Me too", style: .Default, handler: nil))
-            //            self.presentViewController(alert, animated: true, completion: nil)
+            
             floaty.close()
         })
         floaty.addItem("Profile", icon: UIImage(named: "user")!, handler: { item in
             self.performSegue(withIdentifier: "showprof", sender: self)
-//            let alert = UIAlertController(title: "Hey", message: "I'm hungry...", preferredStyle: .Alert)
-//            alert.addAction(UIAlertAction(title: "Me too", style: .Default, handler: nil))
-//            self.presentViewController(alert, animated: true, completion: nil)
+
             floaty.close()
         })
         floaty.addItem("Chat", icon: UIImage(named: "chatmsgnew")!, handler: { item in
-            //            let alert = UIAlertController(title: "Hey", message: "I'm hungry...", preferredStyle: .Alert)
-            //            alert.addAction(UIAlertAction(title: "Me too", style: .Default, handler: nil))
-            //            self.presentViewController(alert, animated: true, completion: nil)
+            self.performSegue(withIdentifier: "tochat", sender: self)
+
             floaty.close()
         })
         self.view.addSubview(floaty)
@@ -52,7 +53,7 @@ class AcceuilViewController: UIViewController,UITableViewDelegate,UITableViewDat
             //hud.show(in: self, animated: true)
             hud1.show(in: self.view)
             // print(self.BarsArray.count)
-            print("compdone")
+            //print("compdone")
             self.pubTable.reloadData()
             hud1.dismiss()
 
@@ -60,27 +61,48 @@ class AcceuilViewController: UIViewController,UITableViewDelegate,UITableViewDat
 
         // Do any additional setup after loading the view.
     }
+    @objc func Notifsget()
+    {
+        GetAllNotifs( flag: true,completionHandler: { success in
+            print(self.notifarray.count)
+        for notif in self.notifarray {
+            
+          print((notif["direction"]!)!)
+            print((notif["username"]!)!)
+            let contnent = UNMutableNotificationContent()
+            contnent.title = "Carpooling"
+            contnent.body = "Request from \((notif["username"]!)!) for your post on \((notif["direction"]!)!)"
+            contnent.sound = UNNotificationSound.default
+            //event after 5 seconds to lunch notification
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2, repeats: false)
+            let request = UNNotificationRequest(identifier: "test", content: contnent, trigger: trigger)
+            UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+            self.DeleteNot(usersend: (notif["id_user_sender"]!)! as! String, direction: (notif["direction"]!)! as! String,flag: true,completionHandler: { success in
+                print ("one deleted")
+            })
+            
+            }
+        })
+        
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let floaty = Floaty()
         floaty.addItem("Add post", icon: UIImage(named: "addannoncenew")!, handler: { item in
             self.performSegue(withIdentifier: "addannonce", sender: self)
-            //            let alert = UIAlertController(title: "Hey", message: "I'm hungry...", preferredStyle: .Alert)
-            //            alert.addAction(UIAlertAction(title: "Me too", style: .Default, handler: nil))
-            //            self.presentViewController(alert, animated: true, completion: nil)
+            
             floaty.close()
         })
         floaty.addItem("Profile", icon: UIImage(named: "user")!, handler: { item in
             self.performSegue(withIdentifier: "showprof", sender: self)
-            //            let alert = UIAlertController(title: "Hey", message: "I'm hungry...", preferredStyle: .Alert)
-            //            alert.addAction(UIAlertAction(title: "Me too", style: .Default, handler: nil))
-            //            self.presentViewController(alert, animated: true, completion: nil)
+            
             floaty.close()
         })
         floaty.addItem("Chat", icon: UIImage(named: "chatmsgnew")!, handler: { item in
-            //            let alert = UIAlertController(title: "Hey", message: "I'm hungry...", preferredStyle: .Alert)
-            //            alert.addAction(UIAlertAction(title: "Me too", style: .Default, handler: nil))
-            //            self.presentViewController(alert, animated: true, completion: nil)
+            self.performSegue(withIdentifier: "tochat", sender: self)
+
+            
             floaty.close()
         })
         self.view.addSubview(floaty)
@@ -92,7 +114,7 @@ class AcceuilViewController: UIViewController,UITableViewDelegate,UITableViewDat
             //hud.show(in: self, animated: true)
             hud1.show(in: self.view)
             // print(self.BarsArray.count)
-            print("compdone")
+            //print("compdone")
             self.pubTable.reloadData()
             hud1.dismiss()
             
@@ -124,7 +146,7 @@ class AcceuilViewController: UIViewController,UITableViewDelegate,UITableViewDat
             //hud.show(in: self, animated: true)
             hud1.show(in: self.view)
             // print(self.BarsArray.count)
-            print("compdone")
+            //print("compdone")
             self.pubTable.reloadData()
             hud1.dismiss()
             
@@ -165,7 +187,6 @@ class AcceuilViewController: UIViewController,UITableViewDelegate,UITableViewDat
            let imgn = "http://marwen1994.alwaysdata.net/Carpooling/public/brahim/"+"\(annonce["imageVoiture"] as! String)"+".jpeg"
         
          let userimgn = "http://marwen1994.alwaysdata.net/Carpooling/public/brahim/"+"\(annonce["imageuser"] as! String)"+".jpeg"
-        print (userimgn)
         carimg?.af_setImage(withURL: URL(string: imgn)!)
         userimg?.af_setImage(withURL: URL(string: userimgn)!)
 
@@ -184,6 +205,7 @@ class AcceuilViewController: UIViewController,UITableViewDelegate,UITableViewDat
             barinfo?.date =  (Annonce["datedeplassement"] as? String)!
                 barinfo?.prix =  (Annonce["prix"] as? String)!
              barinfo?.idannonce =  (Annonce["idAnnonce"] as? String)!
+            barinfo?.userid =  (Annonce["imageuser"] as? String)!
             barinfo?.destination = "\(Annonce["adresseDepart"] as! String)  --> \(Annonce["adresseArrive"] as! String)"
         }
     }
@@ -218,8 +240,61 @@ class AcceuilViewController: UIViewController,UITableViewDelegate,UITableViewDat
                 completionHandler(true)
         }
     }
-    
-
+    public func GetAllNotifs(flag:Bool, completionHandler: @escaping (Bool) -> Void ) {
+        
+        
+        let parameters: Parameters=[
+            "id_user_reciever":UserDefaults.standard.string(forKey: "id")!,
+            
+            ]
+        
+        Alamofire.request(urlgetnotifs, method: .post, parameters: parameters).responseJSON
+            {
+                response  in
+                
+                
+                
+                //getting the json value from the server
+                let result = response.result
+                if let dict = result.value as? Dictionary<String,AnyObject>{
+                    print (dict)
+                   self.notifarray = dict["notif"] as! [AnyObject]
+////                    for name in dict["notif"]! {
+////                        print(name["direction"])
+////                    }
+                }
+                completionHandler(true)
+                
+        }
+    }
+    public func DeleteNot(usersend:String,direction:String,flag:Bool, completionHandler: @escaping (Bool) -> Void ) {
+        
+        
+        let parameters: Parameters=[
+            "id_user_sender":usersend,
+            "direction":direction,
+            "id_user_reciever":UserDefaults.standard.string(forKey: "id")!,
+            
+            ]
+        Alamofire.request(urldel, method: .post, parameters: parameters).responseJSON
+            {
+                response in
+                
+                //    print(response)
+                if let result = response.result.value {
+                    
+                    //converting it as NSDictionary
+                    let jsonData = result as! NSDictionary
+                    
+                    //displaying the message in label
+//                    let val = jsonData.value(forKey: "response") as! String?
+//                    print("commentaded")
+                    
+                }
+                completionHandler(true)
+                
+        }
+    }
     
 }
 extension AcceuilViewController : UISearchBarDelegate {
@@ -240,4 +315,9 @@ fetching = false
 
         
     }
+    
+    
+  
+    
+   
 }

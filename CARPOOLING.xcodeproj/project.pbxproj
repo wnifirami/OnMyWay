@@ -10,6 +10,7 @@
 		061E0AE321FDE6ED00D7F539 /* FeedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061E0AE221FDE6ED00D7F539 /* FeedsViewController.swift */; };
 		061E0AE82203501200D7F539 /* ListUserchatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061E0AE72203501200D7F539 /* ListUserchatViewController.swift */; };
 		061E0AEA22035C3D00D7F539 /* UIViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061E0AE922035C3D00D7F539 /* UIViewX.swift */; };
+		065B9C2822073AF30002E591 /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 065B9C2722073AF30002E591 /* GoogleService-Info-2.plist */; };
 		06795A5721F386AA0070D506 /* SignupfirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06795A5621F386AA0070D506 /* SignupfirstViewController.swift */; };
 		06795A5921F3D7230070D506 /* SignupsecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06795A5821F3D71F0070D506 /* SignupsecondViewController.swift */; };
 		06795A5C21F527B20070D506 /* AcceuilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06795A5B21F527AC0070D506 /* AcceuilViewController.swift */; };
@@ -36,6 +37,7 @@
 		061E0AE221FDE6ED00D7F539 /* FeedsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsViewController.swift; sourceTree = "<group>"; };
 		061E0AE72203501200D7F539 /* ListUserchatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUserchatViewController.swift; sourceTree = "<group>"; };
 		061E0AE922035C3D00D7F539 /* UIViewX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewX.swift; sourceTree = "<group>"; };
+		065B9C2722073AF30002E591 /* GoogleService-Info-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-2.plist"; sourceTree = "<group>"; };
 		06795A5621F386AA0070D506 /* SignupfirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupfirstViewController.swift; sourceTree = "<group>"; };
 		06795A5821F3D71F0070D506 /* SignupsecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupsecondViewController.swift; sourceTree = "<group>"; };
 		06795A5B21F527AC0070D506 /* AcceuilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceuilViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				06A259B221F2116000929A1F /* ViewController.swift */,
 				06A259B421F2116000929A1F /* Main.storyboard */,
 				06A259BA21F2116400929A1F /* Assets.xcassets */,
+				065B9C2722073AF30002E591 /* GoogleService-Info-2.plist */,
 				06A259BC21F2116400929A1F /* LaunchScreen.storyboard */,
 				06A259BF21F2116400929A1F /* Info.plist */,
 				06A259B721F2116000929A1F /* CARPOOLING.xcdatamodeld */,
@@ -229,6 +232,11 @@
 				TargetAttributes = {
 					06A259AC21F2116000929A1F = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -257,6 +265,7 @@
 			files = (
 				06A259BE21F2116400929A1F /* LaunchScreen.storyboard in Resources */,
 				06A259BB21F2116400929A1F /* Assets.xcassets in Resources */,
+				065B9C2822073AF30002E591 /* GoogleService-Info-2.plist in Resources */,
 				06A259B621F2116000929A1F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -500,8 +509,10 @@
 			baseConfigurationReference = 855603F89249CF3AE218DBB3 /* Pods-CARPOOLING.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CARPOOLING/CARPOOLING.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = G96V29LG5G;
 				INFOPLIST_FILE = CARPOOLING/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -509,6 +520,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ESPRIT.CARPOOLING;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -519,8 +531,10 @@
 			baseConfigurationReference = B3A6C8352ABE462FA67AB890 /* Pods-CARPOOLING.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CARPOOLING/CARPOOLING.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = G96V29LG5G;
 				INFOPLIST_FILE = CARPOOLING/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -528,6 +542,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ESPRIT.CARPOOLING;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

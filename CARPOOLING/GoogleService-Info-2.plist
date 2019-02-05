@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>347269542165-ourms5rd5qo8goh71cbs4oc4rm8v090j.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.347269542165-ourms5rd5qo8goh71cbs4oc4rm8v090j</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDzSbTaVQGf5n2yeVs15-YRFCfoCRFe51A</string>
+	<key>GCM_SENDER_ID</key>
+	<string>347269542165</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>ESPRIT.CARPOOLING</string>
+	<key>PROJECT_ID</key>
+	<string>carpooling-d920c</string>
+	<key>STORAGE_BUCKET</key>
+	<string>carpooling-d920c.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:347269542165:ios:e2e51ffa7170bd61</string>
+	<key>DATABASE_URL</key>
+	<string>https://carpooling-d920c.firebaseio.com</string>
+</dict>
+</plist>

@@ -12,6 +12,7 @@ import AlamofireImage
 import Alamofire
 class DetailsViewController: UIViewController {
     @IBOutlet weak var carimg: UIImageView!
+    let urladdnotif = "http://marwen1994.alwaysdata.net/Carpooling/public/addnotif.php"
     var urlgetrate = "http://marwen1994.alwaysdata.net/Carpooling/public/getRate.php"
     var nameimgcar = ""
     var rateval = ""
@@ -28,6 +29,7 @@ class DetailsViewController: UIViewController {
     var desc = ""
     @IBOutlet weak var rateview: CosmosView!
     @IBOutlet weak var userimg: UIImageView!
+    var userid = ""
     var userimgname = ""
     var idannonce = ""
     override func viewDidLoad() {
@@ -134,6 +136,48 @@ carimg?.af_setImage(withURL: URL(string: nameimgcar)!)
         }
         
         
+    }
+
+    public func notifUser(flag:Bool, completionHandler: @escaping (Bool) -> Void ) {
+        
+        
+        let parameters: Parameters=[
+            "direction":destination,
+            "id_user_reciever":userid,
+            "id_user_sender":UserDefaults.standard.string(forKey: "id")!,
+            
+            ]
+        Alamofire.request(urladdnotif, method: .post, parameters: parameters).responseJSON
+            {
+                response in
+                
+                //    print(response)
+                //getting the json value from the server
+                if let result = response.result.value {
+                    
+                    //converting it as NSDictionary
+                    let jsonData = result as! NSDictionary
+                    
+                    //displaying the message in label
+                    let val = jsonData.value(forKey: "response") as! String?
+                    print("notifadedd")
+                    
+                }
+                completionHandler(true)
+                
+        }
+    }
+    
+    
+    @IBAction func sendrequestclicked(_ sender: UIButton) {
+        
+        notifUser ( flag: true,completionHandler: { success in
+            // print(self.BarsArray.count)
+            print("notif is really added")
+            
+                
+            })
+                
     }
     
 

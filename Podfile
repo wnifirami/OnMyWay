@@ -18,6 +18,4 @@ pod 'JGProgressHUD'
 pod 'JSSAlertView'
 
 
-
-
 end
