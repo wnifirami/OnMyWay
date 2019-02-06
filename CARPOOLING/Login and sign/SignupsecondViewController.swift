@@ -9,6 +9,7 @@
 import UIKit
 import MRCountryPicker
 import Alamofire
+import JSSAlertView
 
 
 class SignupsecondViewController: UIViewController,MRCountryPickerDelegate  {
@@ -87,6 +88,11 @@ var urlstore = "http://marwen1994.alwaysdata.net/Carpooling/public/storeUser"
                             
                         }
                         else{
+                            JSSAlertView().show(
+                                self, // the parent view controller of the alert
+                                title: " Please check your network ", // the alert's title
+                                delay: 2 // time in secs
+                            )
                            print("network error")
                             
                         }
@@ -108,6 +114,11 @@ var urlstore = "http://marwen1994.alwaysdata.net/Carpooling/public/storeUser"
             })
         }
         else {
+            JSSAlertView().show(
+                self, // the parent view controller of the alert
+                title: " Please fill all fields ", // the alert's title
+                delay: 2 // time in secs
+            )
             print("3abbi les champs")
         }
         

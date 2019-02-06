@@ -7,10 +7,10 @@
 //
 
 import UIKit
+import JSSAlertView
 
 class SignupfirstViewController: UIViewController {
     @IBOutlet weak var usernale: UITextField!
-    
     @IBOutlet weak var confirmpassword: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var email: UITextField!
@@ -32,13 +32,23 @@ class SignupfirstViewController: UIViewController {
                 defaults.set(self.email.text!, forKey: "emailadd")
                 defaults.set(self.password.text!, forKey: "passwordadd")
                  print("lezm nafs l pass")
+                JSSAlertView().show(
+                    self, // the parent view controller of the alert
+                    title: " confirm with the same password ", // the alert's title
+                    delay: 2 // time in secs
+                )
             }
             else{
                 performSegue(withIdentifier: "signupnext", sender: self)
 
             }
         }
-        else{
+        else{JSSAlertView().show(
+            self, // the parent view controller of the alert
+            title: " Please write in all fields ", // the alert's title
+            delay: 2 // time in secs
+            )
+            
             print("3abbi les champs")
         }
     }

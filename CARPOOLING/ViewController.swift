@@ -10,7 +10,6 @@ import UIKit
 import JSSAlertView
 import Alamofire
 import JGProgressHUD
-import UserNotifications
 class ViewController: UIViewController {
    
     
@@ -25,14 +24,14 @@ class ViewController: UIViewController {
     let urlcheck = "http://marwen1994.alwaysdata.net/Carpooling/public/checkUser"
     override func viewDidLoad() {
         super.viewDidLoad()
-         let contnent = UNMutableNotificationContent()
-        contnent.title = "Carpooling"
-        contnent.body = "hello there"
-        contnent.sound = UNNotificationSound.default
-        //event after 5 seconds to lunch notification
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
-        let request = UNNotificationRequest(identifier: "test", content: contnent, trigger: trigger)
-        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+//         let contnent = UNMutableNotificationContent()
+//        contnent.title = "Carpooling"
+//        contnent.body = "hello there"
+//        contnent.sound = UNNotificationSound.default
+//        //event after 5 seconds to lunch notification
+//        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+//        let request = UNNotificationRequest(identifier: "test", content: contnent, trigger: trigger)
+//        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
 //         helloWorldTimer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(ViewController.sayHello), userInfo: nil, repeats: true)
 //
      
@@ -82,6 +81,7 @@ class ViewController: UIViewController {
                             })
                         }
                         else{
+                            hud1.dismiss()
                             JSSAlertView().show(
                                 self, // the parent view controller of the alert
                                 title: "Please check your email or password", // the alert's title
@@ -92,6 +92,7 @@ class ViewController: UIViewController {
                     
                     }
                     else {
+                        hud1.dismiss()
                         JSSAlertView().show(
                             self, // the parent view controller of the alert
                             title: " Please check your network ", // the alert's title

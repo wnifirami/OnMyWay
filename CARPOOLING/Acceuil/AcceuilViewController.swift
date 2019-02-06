@@ -88,24 +88,24 @@ var urlgetnotifs = "http://marwen1994.alwaysdata.net/Carpooling/public/getnotifi
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let floaty = Floaty()
-        floaty.addItem("Add post", icon: UIImage(named: "addannoncenew")!, handler: { item in
-            self.performSegue(withIdentifier: "addannonce", sender: self)
-            
-            floaty.close()
-        })
-        floaty.addItem("Profile", icon: UIImage(named: "user")!, handler: { item in
-            self.performSegue(withIdentifier: "showprof", sender: self)
-            
-            floaty.close()
-        })
-        floaty.addItem("Chat", icon: UIImage(named: "chatmsgnew")!, handler: { item in
-            self.performSegue(withIdentifier: "tochat", sender: self)
-
-            
-            floaty.close()
-        })
-        self.view.addSubview(floaty)
+//        let floaty = Floaty()
+//        floaty.addItem("Add post", icon: UIImage(named: "addannoncenew")!, handler: { item in
+//            self.performSegue(withIdentifier: "addannonce", sender: self)
+//
+//            floaty.close()
+//        })
+//        floaty.addItem("Profile", icon: UIImage(named: "user")!, handler: { item in
+//            self.performSegue(withIdentifier: "showprof", sender: self)
+//
+//            floaty.close()
+//        })
+//        floaty.addItem("Chat", icon: UIImage(named: "chatmsgnew")!, handler: { item in
+//            self.performSegue(withIdentifier: "tochat", sender: self)
+//
+//
+//            floaty.close()
+//        })
+//        self.view.addSubview(floaty)
         GetAll( flag: true,completionHandler: { success in
             let hud1 = JGProgressHUD(style: .light)
             hud1.textLabel.text = "Loading..."
@@ -122,22 +122,22 @@ var urlgetnotifs = "http://marwen1994.alwaysdata.net/Carpooling/public/getnotifi
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        let floaty = Floaty()
-        floaty.addItem("Add post", icon: UIImage(named: "addannoncenew")!, handler: { item in
-            self.performSegue(withIdentifier: "addannonce", sender: self)
-  
-            floaty.close()
-        })
-        floaty.addItem("Profile", icon: UIImage(named: "user")!, handler: { item in
-            self.performSegue(withIdentifier: "showprof", sender: self)
-     
-            floaty.close()
-        })
-        floaty.addItem("Chat", icon: UIImage(named: "chatmsgnew")!, handler: { item in
-          self.performSegue(withIdentifier: "tochat", sender: self)
-            floaty.close()
-        })
-        self.view.addSubview(floaty)
+//        let floaty = Floaty()
+//        floaty.addItem("Add post", icon: UIImage(named: "addannoncenew")!, handler: { item in
+//            self.performSegue(withIdentifier: "addannonce", sender: self)
+//  
+//            floaty.close()
+//        })
+//        floaty.addItem("Profile", icon: UIImage(named: "user")!, handler: { item in
+//            self.performSegue(withIdentifier: "showprof", sender: self)
+//     
+//            floaty.close()
+//        })
+//        floaty.addItem("Chat", icon: UIImage(named: "chatmsgnew")!, handler: { item in
+//          self.performSegue(withIdentifier: "tochat", sender: self)
+//            floaty.close()
+//        })
+//        self.view.addSubview(floaty)
         GetAll( flag: true,completionHandler: { success in
             let hud1 = JGProgressHUD(style: .light)
             hud1.textLabel.text = "Loading..."

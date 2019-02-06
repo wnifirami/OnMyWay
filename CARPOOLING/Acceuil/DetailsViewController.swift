@@ -32,6 +32,10 @@ class DetailsViewController: UIViewController {
     var userid = ""
     var userimgname = ""
     var idannonce = ""
+    
+    @IBOutlet weak var sendrequestbtn: UIButton!
+    
+    @IBOutlet weak var feedbackbtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 carimg?.af_setImage(withURL: URL(string: nameimgcar)!)
@@ -45,6 +49,11 @@ carimg?.af_setImage(withURL: URL(string: nameimgcar)!)
         datelbl.text = date
         destinationlbl.text = destination
         getRate()
+        if userid == UserDefaults.standard.string(forKey: "id")! {
+            
+            sendrequestbtn.isHidden = true
+            feedbackbtn.isHidden = true
+        }
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -103,6 +112,11 @@ carimg?.af_setImage(withURL: URL(string: nameimgcar)!)
             //send parametre when we perform segue to details of the bar
             let feeds = segue.destination as? FeedsViewController
             feeds?.idannonce = idannonce
+        }
+        if segue.identifier == "chatwith" {
+            //send parametre when we perform segue to details of the bar
+            let feeds = segue.destination as? chatViewController
+            feeds?.idget = userid
         }
     }
     func getRate(){
@@ -180,5 +194,8 @@ carimg?.af_setImage(withURL: URL(string: nameimgcar)!)
                 
     }
     
-
+    @IBAction func messagebtnclicked(_ sender: UIButton) {
+        performSegue(withIdentifier: "chatwith", sender: self)
+    }
+    
 }
